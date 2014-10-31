@@ -76,7 +76,7 @@ int main(int argc, char **argv){
 
         double time= (stop.tv_sec-start.tv_sec) + pow(10,-6)*(stop.tv_usec-start.tv_usec);
 
-        cout << "Time: " << time << "s\n";
+        cout << "Time: " << time << " s\n";
     }
   
 
