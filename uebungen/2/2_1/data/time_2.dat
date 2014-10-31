@@ -1,0 +1,40 @@
+mpirun -host creek01,creek02,creek03,creek04,creek05,creek06,creek07,creek08 -np 2 ./2_1 10 0 
+0.00163579 8.17895e-05
+mpirun -host creek01,creek02,creek03,creek04,creek05,creek06,creek07,creek08 -np 2 ./2_1 10 0 
+0.00142241 7.11203e-05
+mpirun -host creek01,creek02,creek03,creek04,creek05,creek06,creek07,creek08 -np 2 ./2_1 10 0 
+0.00120687 6.03437e-05
+mpirun -host creek01,creek02,creek03,creek04,creek05,creek06,creek07,creek08 -np 2 ./2_1 10 0 
+0.00116253 5.81264e-05
+mpirun -host creek01,creek02,creek03,creek04,creek05,creek06,creek07,creek08 -np 2 ./2_1 10 0 
+0.00132537 6.62684e-05
+mpirun -host creek01,creek02,creek03,creek04,creek05,creek06,creek07,creek08 -np 2 ./2_1 10 0 
+0.00159383 7.96914e-05
+mpirun -host creek01,creek02,creek03,creek04,creek05,creek06,creek07,creek08 -np 2 ./2_1 10 0 
+0.00122046 6.10232e-05
+mpirun -host creek01,creek02,creek03,creek04,creek05,creek06,creek07,creek08 -np 2 ./2_1 10 0 
+0.0012939 6.46949e-05
+mpirun -host creek01,creek02,creek03,creek04,creek05,creek06,creek07,creek08 -np 2 ./2_1 10 0 
+0.00153613 7.68065e-05
+mpirun -host creek01,creek02,creek03,creek04,creek05,creek06,creek07,creek08 -np 2 ./2_1 10 0 
+0.000890732 4.45366e-05
+mpirun -host creek01,creek02,creek03,creek04,creek05,creek06,creek07,creek08 -np 2 ./2_1 10 0 
+0.0011878 5.93901e-05
+mpirun -host creek01,creek02,creek03,creek04,creek05,creek06,creek07,creek08 -np 2 ./2_1 10 0 
+0.00150275 7.51376e-05
+mpirun -host creek01,creek02,creek03,creek04,creek05,creek06,creek07,creek08 -np 2 ./2_1 10 0 
+0.00117254 5.86271e-05
+mpirun -host creek01,creek02,creek03,creek04,creek05,creek06,creek07,creek08 -np 2 ./2_1 10 0 
+0.00134945 6.74725e-05
+mpirun -host creek01,creek02,creek03,creek04,creek05,creek06,creek07,creek08 -np 2 ./2_1 10 0 
+0.00137639 6.88195e-05
+mpirun -host creek01,creek02,creek03,creek04,creek05,creek06,creek07,creek08 -np 2 ./2_1 10 0 
+0.00143933 7.19666e-05
+mpirun -host creek01,creek02,creek03,creek04,creek05,creek06,creek07,creek08 -np 2 ./2_1 10 0 
+0.00158167 7.90834e-05
+mpirun -host creek01,creek02,creek03,creek04,creek05,creek06,creek07,creek08 -np 2 ./2_1 10 0 
+0.00119257 5.96285e-05
+mpirun -host creek01,creek02,creek03,creek04,creek05,creek06,creek07,creek08 -np 2 ./2_1 10 0 
+0.00147533 7.37667e-05
+mpirun -host creek01,creek02,creek03,creek04,creek05,creek06,creek07,creek08 -np 2 ./2_1 10 0 
+0.00116086 5.8043e-05

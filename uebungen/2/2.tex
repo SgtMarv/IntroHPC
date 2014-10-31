@@ -1,0 +1,77 @@
+\documentclass[a4paper,11pt]{scrartcl}
+\usepackage[ngerman]{babel} 
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{siunitx}
+
+\usepackage{epstopdf}
+
+\setcounter{section}{2}
+
+
+\begin{document}
+\hfill Alexander Schnapp
+
+\hfill Max Menges
+
+\begin{center}
+\underline{\Huge{Intro HPC: Blatt 2}}\\
+\large{04.11.1014}\\
+\end{center}
+
+\subsection{MPI Ring Communication}
+
+Der Quelltext zur aufgabe liegt unter \verb+../2/2_1/2_1.cpp+. In dem Ordner liegt auch ein \verb+Makefile+ zum Compilieren und Ausfürhren. Benutzung: 
+
+\begin{table}[h]
+    \begin{tabular}{ll}
+    \verb+make+& Compile \\ 
+    \verb+make clean+& Bin und \verb+*.o+ löschen  \\ 
+    \verb+make run proc=$p msg=$m v=$v +& Ausfrühren mit \verb+$p+ Prozessen, \verb+$m+ Nachrichten \\
+    \verb+make run_opt proc=$p msg=$m v=$v+&  Siehe \verb+run+, aber mit optimiertem Mapping\\ 
+    \end{tabular}
+\end{table}
+
+Parameter \verb+$v+ für Ausgabe der Zeit, \verb+1+ für nett formatiert, \verb+0+ nur gesamte Zeit und pro Nachricht.\\
+
+Plot unten zeigt durchschnittliche Zeit pro Nachricht bei 12 Prozessen. Jeder run wurde 20 mal gemessen um den Fehler in der Laufzeit zu bestimmen (stabilste message size $m$). Obwohl 5 Nachrichten eine kleine Abweichung haben, haben wir für die Messung 10 Nachrichten genommen um ein wenig bessere Statistik machen zu können.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\textwidth,keepaspectratio]{2_1/data/runs.eps}
+\end{figure}
+
+Messung der Ausführungsdauer bei 24 Prozessen, 10 Nachrichten pro Prozess und Mapping \verb+creek01,..,creek08+. Das Programm wurde auch wieder für jede Prozessanzahl 20 mal ausgeführt. Die Ergebnisse sind unten geplottet. Die Zeit pro Nachricht steigt mit der Anzahl Prozesse leicht an und liegt bei $\approx$ \SI{0.07}{\milli\second}.\\
+
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\textwidth,keepaspectratio]{2_1/data/time.eps}
+\end{figure}
+
+\sisetup{separate-uncertainty}
+
+Für den letzen Teil der Aufgabe wurde das Mapping für bessere Performance geändert. Jeder Prozess sendet an seinen Nachfolger, da dieser durch das "normale" Mapping jeweils auf einem anderen Rechner liegt, muss jede Nachricht einmal durchs Netzwerk, was Zeit kostet. 
+Das Mapping wurde so angepasst, dass die ersten 8 Prozesse (\verb+creek04+ hat laut \verb+nproc+ 8 Cores) auf \verb+creek04+ laufen und die nächsten 4 auf \verb+creek05+. Dadurch sind nur zwei Nachrichten über das Netzwerk nötig, alle anderen laufen nur von Core zu Core in der selben Maschine. \\
+
+Dadurch verringert sich die Zeit pro Nachricht auf \SI[multi-part-units=single]{0.0292(26)}{\milli\second} (siehe Plot). Das optimierte Mapping ist damit $\approx$ $2.35$ fach schneller.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\textwidth,keepaspectratio]{2_1/data/opt.eps}
+\end{figure}
+
+
+
+
+\subsection{Barrier Synchronization}
+
+
+\subsection{Matrix multiply – sequential version}
+
+
+
+
+
+\end{document}

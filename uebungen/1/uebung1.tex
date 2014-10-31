@@ -1,0 +1,31 @@
+\documentclass[a4paper,11pt]{scrartcl}
+\usepackage[ngerman]{babel} 
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+\hfill Alexander Schnapp
+
+\hfill Max Menges\\
+
+\begin{center}
+\underline{\Huge{Intro HPC: Blatt1}}\\
+\large{28.10.1014}\\
+\end{center}
+
+\section{Zusammenfassung: Flynn \& Hung (2005) }
+In diesem Paper beschäftigt sich der Autor mit der Frage wie sich die Abwägung zwischen Performance, Fläche und elektrischer Leistung auf zukünftige Rechnen Architekturen auswirken wird. Er geht dabei auf den "road map" der SIA (Semiconducter Industry Association) ein, welcher das Wachstum bestimmter Kenngrößen von Mikroprozessoren voraussagte. Diesen versucht er nun zu analysieren und zu aktualisieren.
+
+ Während dieser eine Verzehnfachung der on-chip Taktfrequenz bis 2018 voraus sagt, hält dies der Autor für äußerst unwahrscheinlich. Dies begründet er über deren Begrenzung durch die elektrische Leistung, die "power wall". Dadurch wird man vielmehr auf Parallelisierung auf Befehls- und Prozessebene setzen, um an Rechenleistung zu gewinnen. Weiterhin könnten dadurch vermehrt sogenannte systems on chip (SoC) aufkommen.
+ 
+Da wir in den letzten Jahren deutlich von der vorausgesagten Taktfrequenz Erhöhung zurück bleiben scheinen sich die Aussagen des Papers zu bewahrheiten.
+\section{Zusammenfassung: Walker}
+
+Das Paper von Walker untersucht die Leistungsunterschiede in parallelen Benchmarks auf Amazons EC2 Cloud und einem vergleichbaren wissenschaftlichen Cluster (NCSA). Als Benchmark wurden diverse parallele Algorithmen verwendet die "typische" wissenschaftliche Anwendungen simulieren sollen. Obwohl die Hardware -- bis auf Speicher und Netzwerk -- bei beiden System gleich ist, schneidet Amazons EC2 deutlich schlechter ab. 
+
+Der Unterschied kommt von den verschiedenen verwendeten Network Interconnects -- Infiniband für den NCSA Cluster und unbekannt (Ethernet?) in Amazons EC2. Infniband schneidet bei Tests sowohl in Bandbreite als auch in Latenz um Größenordnungen besser ab als Amazons EC2. Dies erklärt den großen Performance Unterschied bei Benchmarks mit großem Message Parsing Aufwand im Gegensatz zu nur geringen Unterschieden bei embarrassingly parallel Anwendungen. 
+
+Es ist überraschend wie viel schlechter -- teilweise mehrere 100\% -- Amazons Cloud Computing Service ist. Ebenso überraschend ist die deutlich bessere Leistung von Infiniband. 
+
+
+\end{document}
