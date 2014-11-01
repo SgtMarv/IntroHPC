@@ -24,7 +24,7 @@
 
 Der Quelltext zur aufgabe liegt unter \verb+../2/2_1/2_1.cpp+. In dem Ordner liegt auch ein \verb+Makefile+ zum Compilieren und Ausfürhren. Benutzung: 
 
-\begin{table}[h]
+\begin{table}[h!]
     \begin{tabular}{ll}
     \verb+make+& Compile \\ 
     \verb+make clean+& Bin und \verb+*.o+ löschen  \\ 
@@ -70,8 +70,20 @@ Dadurch verringert sich die Zeit pro Nachricht auf \SI[multi-part-units=single]{
 
 \subsection{Matrix multiply – sequential version}
 
+Der Quelltext zur aufgabe liegt unter \verb+../2/2_3/2_3.cpp+. In dem Ordner liegt auch ein \verb+Makefile+ zum Compilieren und Ausfürhren. Benutzung: 
+
+\begin{table}[h!]
+    \begin{tabular}{ll}
+    \verb+make+& Compile \\ 
+    \verb+make run n=$n runs=$x+ & Matrix Multiplation mit $\$n*\$n$-Matritzen, \verb+$x+ mal ausgeführt.\\
+    \end{tabular}
+\end{table}
 
 
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\textwidth,keepaspectratio]{2_3/data/matmult.eps}
+\end{figure}
 
 
 \end{document}

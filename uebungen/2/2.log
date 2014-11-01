@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.4.29)  30 OCT 2014 20:42
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.4.29)  31 OCT 2014 19:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -982,29 +982,59 @@ File: 2_1/data/opt-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: 2_1/data/opt-eps-converted-to.pdf used on input line 6
 2.
 (pdftex.def)             Requested size: 292.7776pt x 175.66806pt.
- [2 <./2_1/data/time-eps-converted-to.pdf> <./2_1/data/opt-eps-converted-to.pdf
->] (./2.aux) ) 
+
+Overfull \hbox (24.74796pt too wide) in paragraph at lines 76--80
+[][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+Package epstopdf Info: Source file: <2_3/data/matmult.eps>
+(epstopdf)                    date: 2014-10-31 18:47:42
+(epstopdf)                    size: 34365 bytes
+(epstopdf)             Output file: <2_3/data/matmult-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-10-31 19:10:36
+(epstopdf)                    size: 12961 bytes
+(epstopdf)             Command: <repstopdf --outfile=2_3/data/matmult-eps-conve
+rted-to.pdf 2_3/data/matmult.eps>
+(epstopdf)             \includegraphics on input line 85.
+Package epstopdf Info: Output file is already uptodate.
+<2_3/data/matmult-eps-converted-to.pdf, id=23, 361.35pt x 216.81pt>
+File: 2_3/data/matmult-eps-converted-to.pdf Graphic file (type pdf)
+
+<use 2_3/data/matmult-eps-converted-to.pdf>
+Package pdftex.def Info: 2_3/data/matmult-eps-converted-to.pdf used on input li
+ne 85.
+(pdftex.def)             Requested size: 292.7776pt x 175.66806pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[2 <./2_1/data/time-eps-converted-to.pdf> <./2_1/data/opt-eps-converted-to.pdf>
+] [3 <./2_3/data/matmult-eps-converted-to.pdf>] (./2.aux) ) 
 Here is how much of TeX's memory you used:
- 10459 strings out of 493763
- 215993 string characters out of 3144975
+ 10465 strings out of 493763
+ 216180 string characters out of 3144975
  233348 words of memory out of 3000000
- 13584 multiletter control sequences out of 15000+200000
+ 13588 multiletter control sequences out of 15000+200000
  12726 words of font info for 36 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
  54i,8n,47p,386b,417s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/local/texlive/2010/texmf-dist/fonts/enc/dvips/cm-super/cm-s
-uper-t1.enc}</usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmmi10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mr10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cms
-y10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/cm-super/sfrm109
-5.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/cm-super/sfrm1200.
-pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/cm-super/sfrm2488.pf
-b></usr/local/texlive/2010/texmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb>
-</usr/local/texlive/2010/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on 2.pdf (2 pages, 154372 bytes).
+{/usr/local/texlive/
+2010/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/20
+10/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/201
+0/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2010/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2010/t
+exmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2010/tex
+mf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2010/texmf
+-dist/fonts/type1/public/cm-super/sfrm2488.pfb></usr/local/texlive/2010/texmf-d
+ist/fonts/type1/public/cm-super/sfsx1200.pfb></usr/local/texlive/2010/texmf-dis
+t/fonts/type1/public/cm-super/sftt1095.pfb>
+Output written on 2.pdf (3 pages, 166887 bytes).
 PDF statistics:
- 65 PDF objects out of 1000 (max. 8388607)
- 43 compressed objects within 1 object stream
+ 75 PDF objects out of 1000 (max. 8388607)
+ 49 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
