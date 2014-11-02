@@ -1,7 +1,10 @@
 \documentclass[a4paper,11pt]{scrartcl}
+
 \usepackage[ngerman]{babel} 
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+
 \usepackage{graphicx}
 \usepackage{siunitx}
 
@@ -79,11 +82,16 @@ Der Quelltext zur aufgabe liegt unter \verb+../2/2_3/2_3.cpp+. In dem Ordner lie
     \end{tabular}
 \end{table}
 
+Ausgeführt auf \verb+creek04+ braucht die nicht optimierte Matrix Multiplikation im Schnitt \SI{333.19}{\second}. Die Matrix Multiplikation besteht aus 3 ineinander verschachtelten Schleifen und bei jedem Durchlauf der inneren Schleife werden zwei floating point Operationen (1 \verb+add+, 1 \verb+mul+) ausgeführt, insgesamt also $2\cdot n^3$ floating point Operationen pro Matrix Multiplikation. Bei $n=2048$ ergibt dies $\approx 0.05155 GFLOPS$. 
 
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.7\textwidth,keepaspectratio]{2_3/data/matmult.eps}
 \end{figure}
+
+Intel gibt für den \emph{Xeon E5-1620}\footnote{\url{http://download.intel.com/support/processors/xeon/sb/xeon_E5-1600.pdf}} theoretische $115.2$ GFLOPS bei 4 Cores an. Mit einem Core sollten somit noch immer noch $28.8$ GFLOPS zu erreichen sein.
+
+Der performance gap kommt von der größe der Matrix und der Zugriffszeit auf den Hauptspeicher bei einem Cache Miss. Da die Matrix nicht mehr komplett in den Cache passt (32 MB bei $n=2048$ double-precision), muss ständig auf den Hauptspeicher zugegriffen werden. Da außerdem die $B$ Matrix (bei $C=A\times B$) zeilenweise durchlaufen wird, werden -- je nach Matrix und Cache-Line größe -- nur ein oder wenige Einträge pro Cache-Line verwendet. 
 
 
 \end{document}

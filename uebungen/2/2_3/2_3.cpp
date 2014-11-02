@@ -46,11 +46,23 @@ void mat_mult(double* a, double* b, double* c,int size){
     }
 }
 
+void mat_mult_opt(double* a, double* b, double* c,int size){
+    for (int i = 0; i < size; i++){
+        for (int k = 0; k < size; k++){
+            for (int j = 0; j < size; j++){
+                c[i*size+j] += a[i*size+k] * b[k*size+j];
+            }
+        }
+    }
+}
+
 
 int main(int argc, char **argv){
-    int size, runs; 
+    int size, runs;
+    bool opt;
     size = atoi(argv[1]);
     runs = atoi(argv[2]);
+    opt  = atoi(argv[3]);
     
     int seed = time(NULL);
     srand(seed);
@@ -69,9 +81,17 @@ int main(int argc, char **argv){
 
         //print_mat(a,size);
         //print_mat(b,size);
-        gettimeofday(&start,NULL);
-        mat_mult(a,b,c,size);
-        gettimeofday(&stop,NULL);
+        if(opt){
+            gettimeofday(&start,NULL);
+            mat_mult_opt(a,b,c,size);
+            gettimeofday(&stop,NULL);
+        }
+        else{
+            gettimeofday(&start,NULL);
+            mat_mult(a,b,c,size);
+            gettimeofday(&stop,NULL);
+        }
+
         //print_mat(c,size);
 
         double time= (stop.tv_sec-start.tv_sec) + pow(10,-6)*(stop.tv_usec-start.tv_usec);

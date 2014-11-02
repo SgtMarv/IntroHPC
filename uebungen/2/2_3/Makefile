@@ -8,6 +8,6 @@ clean:
 	rm -rf *.o 2_3
 
 run:
-	./2_3 $(n) $(runs)
+	./2_3 $(n) $(runs) $(opt)
 
 
