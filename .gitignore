@@ -1,2 +1,5 @@
 script/
 *.swp
+*.aux
+*.log
+*.out
