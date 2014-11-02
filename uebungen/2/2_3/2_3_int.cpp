@@ -40,6 +40,15 @@ void mat_mult(int* a, int* b, int* c,int size){
     for (int i = 0; i < size; i++){
         for (int j = 0; j < size; j++){
             for (int k = 0; k < size; k++){
+                c[i*size+j] += a[i*size+k] * b[j*size+k];
+            }
+        }
+    }
+}
+void mat_mult_i(int* a, int* b, int* c,int size){
+    for (int i = 0; i < size; i++){
+            for (int k = 0; k < size; k++){
+        for (int j = 0; j < size; j++){
                 c[i*size+j] += a[i*size+k] * b[k*size+j];
             }
         }
