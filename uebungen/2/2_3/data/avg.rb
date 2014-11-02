@@ -1,4 +1,4 @@
-#! /home/max/.rvm/rubies/ruby-1.9.2-p290/bin/ruby
+#! /usr/bin/ruby
 
 lines = File.open(ARGV[0]).readlines
 
