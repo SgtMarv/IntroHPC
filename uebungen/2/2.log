@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.4.29)  2 NOV 2014 17:08
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.4.29)  2 NOV 2014 19:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -455,6 +455,74 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip47
 )
+(/usr/local/texlive/2010/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip48
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2010/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks17
+\ex@=\dimen107
+))
+(/usr/local/texlive/2010/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen108
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count99
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count100
+\leftroot@=\count101
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count102
+\DOTSCASE@=\count103
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box27
+\strutbox@=\box28
+\big@size=\dimen109
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count104
+\c@MaxMatrixCols=\count105
+\dotsspace@=\muskip11
+\c@parentequation=\count106
+\dspbrk@lvl=\count107
+\tag@help=\toks18
+\row@=\count108
+\column@=\count109
+\maxfields@=\count110
+\andhelp@=\toks19
+\eqnshift@=\dimen110
+\alignsep@=\dimen111
+\tagshift@=\dimen112
+\tagwidth@=\dimen113
+\totwidth@=\dimen114
+\lineht@=\dimen115
+\@envbody=\toks20
+\multlinegap=\skip49
+\multlinetaggap=\skip50
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2009/06/22 v3.00
+)
 (/usr/local/texlive/2010/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
@@ -471,10 +539,10 @@ Package graphics Info: Driver file: pdftex.def on input line 91.
 
 (/usr/local/texlive/2010/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/04/25 v0.06b Graphics/color for pdfTeX
-\Gread@gobject=\count99
+\Gread@gobject=\count111
 ))
-\Gin@req@height=\dimen107
-\Gin@req@width=\dimen108
+\Gin@req@height=\dimen116
+\Gin@req@width=\dimen117
 )
 (/usr/local/texlive/2010/texmf-dist/tex/latex/siunitx/siunitx.sty
 (/usr/local/texlive/2010/texmf-dist/tex/latex/expl3/expl3.sty
@@ -486,7 +554,7 @@ Package: expl3 2011/02/17 v2156 L3 Experimental code bundle wrapper
 
 (/usr/local/texlive/2010/texmf-dist/tex/latex/etex-pkg/etex.sty
 Package: etex 1998/03/26 v2.0 eTeX basic definition package (PEB)
-\et@xins=\count100
+\et@xins=\count112
 )
 (/usr/local/texlive/2010/texmf-dist/tex/latex/expl3/l3basics.sty
 Package: l3basics 2011/02/26 v2158 L3 Experimental basic definitions
@@ -499,14 +567,14 @@ Package: l3tl 2011/03/07 v2184 L3 Experimental Token Lists
 )
 (/usr/local/texlive/2010/texmf-dist/tex/latex/expl3/l3int.sty
 Package: l3int 2011/03/06 v2178 L3 Experimental Integer module
-\l_tmpa_int=\count101
-\l_tmpb_int=\count102
-\l_tmpc_int=\count103
-\g_tmpa_int=\count104
-\g_tmpb_int=\count105
-\c_max_int=\count106
-\g_tl_inline_level_int=\count107
-\g_prg_inline_level_int=\count108
+\l_tmpa_int=\count113
+\l_tmpb_int=\count114
+\l_tmpc_int=\count115
+\g_tmpa_int=\count116
+\g_tmpb_int=\count117
+\c_max_int=\count118
+\g_tl_inline_level_int=\count119
+\g_prg_inline_level_int=\count120
 )
 (/usr/local/texlive/2010/texmf-dist/tex/latex/expl3/l3quark.sty
 Package: l3quark 2011/03/03 v2172 L3 Experimental Quark Commands
@@ -516,20 +584,20 @@ Package: l3seq 2010/03/29 v1879 L3 Experimental sequences and stacks
 )
 (/usr/local/texlive/2010/texmf-dist/tex/latex/expl3/l3toks.sty
 Package: l3toks 2010/09/20 v2037 L3 Experimental Token Registers
-\l_tmpb_toks=\toks17
-\l_tmpc_toks=\toks18
-\g_tmpa_toks=\toks19
-\g_tmpb_toks=\toks20
-\g_tmpc_toks=\toks21
-\c_empty_toks=\toks22
-\l_tl_replace_toks=\toks23
+\l_tmpb_toks=\toks22
+\l_tmpc_toks=\toks23
+\g_tmpa_toks=\toks24
+\g_tmpb_toks=\toks25
+\g_tmpc_toks=\toks26
+\c_empty_toks=\toks27
+\l_tl_replace_toks=\toks28
 )
 (/usr/local/texlive/2010/texmf-dist/tex/latex/expl3/l3prg.sty
 Package: l3prg 2011/03/06 v2178 L3 Experimental control structures
 )
 (/usr/local/texlive/2010/texmf-dist/tex/latex/expl3/l3clist.sty
 Package: l3clist 2011/03/06 v2178 L3 Experimental comma separated lists
-\g_clist_map_inline_int=\count109
+\g_clist_map_inline_int=\count121
 )
 (/usr/local/texlive/2010/texmf-dist/tex/latex/expl3/l3token.sty
 Package: l3token 2011/02/16 v2151 L3 Experimental token investigation and manip
@@ -537,224 +605,217 @@ ulation
 )
 (/usr/local/texlive/2010/texmf-dist/tex/latex/expl3/l3prop.sty
 Package: l3prop 2010/11/23 v2087 L3 Experimental Property Lists
-\g_prop_inline_level_int=\count110
+\g_prop_inline_level_int=\count122
 )
 (/usr/local/texlive/2010/texmf-dist/tex/latex/expl3/l3msg.sty
 Package: l3msg 2010/10/02 v2052 L3 Experimental LaTeX Messages module
-\l_msg_redirect_classes_prop=\toks24
-\l_msg_redirect_names_prop=\toks25
-\l_msg_redirect_fatal_prop=\toks26
-\l_msg_redirect_error_prop=\toks27
-\l_msg_redirect_warning_prop=\toks28
-\l_msg_redirect_info_prop=\toks29
-\l_msg_redirect_log_prop=\toks30
-\l_msg_redirect_trace_prop=\toks31
-\l_msg_redirect_none_prop=\toks32
+\l_msg_redirect_classes_prop=\toks29
+\l_msg_redirect_names_prop=\toks30
+\l_msg_redirect_fatal_prop=\toks31
+\l_msg_redirect_error_prop=\toks32
+\l_msg_redirect_warning_prop=\toks33
+\l_msg_redirect_info_prop=\toks34
+\l_msg_redirect_log_prop=\toks35
+\l_msg_redirect_trace_prop=\toks36
+\l_msg_redirect_none_prop=\toks37
 )
 (/usr/local/texlive/2010/texmf-dist/tex/latex/expl3/l3io.sty
 Package: l3io 2010/10/03 v2063 L3 Experimental i/o module
-\g_iow_streams_prop=\toks33
-\g_ior_streams_prop=\toks34
-\l_iow_stream_int=\count111
+\g_iow_streams_prop=\toks38
+\g_ior_streams_prop=\toks39
+\l_iow_stream_int=\count123
 )
 (/usr/local/texlive/2010/texmf-dist/tex/latex/expl3/l3skip.sty
 Package: l3skip 2011/02/15 v2149 L3 Experimental skip registers
-\l_tmpa_skip=\skip48
-\l_tmpb_skip=\skip49
-\l_tmpc_skip=\skip50
-\g_tmpa_skip=\skip51
-\g_tmpb_skip=\skip52
-\l_tmpa_dim=\dimen109
-\l_tmpb_dim=\dimen110
-\l_tmpc_dim=\dimen111
-\l_tmpd_dim=\dimen112
-\g_tmpa_dim=\dimen113
-\g_tmpb_dim=\dimen114
+\l_tmpa_skip=\skip51
+\l_tmpb_skip=\skip52
+\l_tmpc_skip=\skip53
+\g_tmpa_skip=\skip54
+\g_tmpb_skip=\skip55
+\l_tmpa_dim=\dimen118
+\l_tmpb_dim=\dimen119
+\l_tmpc_dim=\dimen120
+\l_tmpd_dim=\dimen121
+\g_tmpa_dim=\dimen122
+\g_tmpb_dim=\dimen123
 )
 (/usr/local/texlive/2010/texmf-dist/tex/latex/expl3/l3box.sty
 Package: l3box 2011/03/06 v2178 L3 Experimental Box module
-\l_tmpb_box=\box27
+\l_tmpb_box=\box29
 )
 (/usr/local/texlive/2010/texmf-dist/tex/latex/expl3/l3keyval.sty
 Package: l3keyval 2010/04/11 v1890 L3 Experimental keyval processing
-\l_KV_level_int=\count112
+\l_KV_level_int=\count124
 )
 (/usr/local/texlive/2010/texmf-dist/tex/latex/expl3/l3keys.sty
 Package: l3keys 2010/11/11 v2082 L3 Experimental key-value support
-\l_keys_choice_int=\count113
+\l_keys_choice_int=\count125
 )
 (/usr/local/texlive/2010/texmf-dist/tex/latex/expl3/l3precom.sty
 Package: l3precom 2010/02/09 v1793 L3 Experimental precompilation module
-\g_gen_sym_int=\count114
-\g_ggen_sym_int=\count115
+\g_gen_sym_int=\count126
+\g_ggen_sym_int=\count127
 )
 (/usr/local/texlive/2010/texmf-dist/tex/latex/expl3/l3xref.sty
 Package: l3xref 2011/02/16 v2151 L3 Experimental cross referencing
-\g_xref_all_curr_immediate_fields_prop=\toks35
-\g_xref_all_curr_deferred_fields_prop=\toks36
+\g_xref_all_curr_immediate_fields_prop=\toks40
+\g_xref_all_curr_deferred_fields_prop=\toks41
 )
 (/usr/local/texlive/2010/texmf-dist/tex/latex/expl3/l3file.sty
 Package: l3file 2010/03/21 v1853 L3 Experimental file loading
 )
 (/usr/local/texlive/2010/texmf-dist/tex/latex/expl3/l3fp.sty
 Package: l3fp 2011/03/06 v2178 L3 Experimental floating-point operations
-\c_one_million=\count116
-\c_one_hundred_million=\count117
-\c_five_hundred_million=\count118
-\c_one_thousand_million=\count119
-\c_fp_pi_by_four_decimal_int=\count120
-\c_fp_pi_by_four_extended_int=\count121
-\c_fp_pi_decimal_int=\count122
-\c_fp_pi_extended_int=\count123
-\c_fp_two_pi_decimal_int=\count124
-\c_fp_two_pi_extended_int=\count125
-\l_fp_count_int=\count126
-\l_fp_div_offset_int=\count127
-\l_fp_exp_integer_int=\count128
-\l_fp_exp_decimal_int=\count129
-\l_fp_exp_extended_int=\count130
-\l_fp_exp_exponent_int=\count131
-\l_fp_input_a_sign_int=\count132
-\l_fp_input_a_integer_int=\count133
-\l_fp_input_a_decimal_int=\count134
-\l_fp_input_a_exponent_int=\count135
-\l_fp_input_b_sign_int=\count136
-\l_fp_input_b_integer_int=\count137
-\l_fp_input_b_decimal_int=\count138
-\l_fp_input_b_exponent_int=\count139
-\l_fp_input_a_extended_int=\count140
-\l_fp_input_b_extended_int=\count141
-\l_fp_mul_a_i_int=\count142
-\l_fp_mul_a_ii_int=\count143
-\l_fp_mul_a_iii_int=\count144
-\l_fp_mul_a_iv_int=\count145
-\l_fp_mul_a_v_int=\count146
-\l_fp_mul_a_vi_int=\count147
-\l_fp_mul_b_i_int=\count148
-\l_fp_mul_b_ii_int=\count149
-\l_fp_mul_b_iii_int=\count150
-\l_fp_mul_b_iv_int=\count151
-\l_fp_mul_b_v_int=\count152
-\l_fp_mul_b_vi_int=\count153
-\l_fp_mul_output_int=\count154
-\l_fp_output_sign_int=\count155
-\l_fp_output_integer_int=\count156
-\l_fp_output_decimal_int=\count157
-\l_fp_output_exponent_int=\count158
-\l_fp_output_extended_int=\count159
-\l_fp_round_position_int=\count160
-\l_fp_round_target_int=\count161
-\l_fp_split_sign_int=\count162
-\l_fp_tmp_int=\count163
-\l_fp_trig_octant_int=\count164
-\l_fp_trig_sign_int=\count165
-\l_fp_trig_decimal_int=\count166
-\l_fp_trig_extended_int=\count167
-\l_fp_tmp_dim=\dimen115
-\l_fp_tmp_skip=\skip53
+\c_one_million=\count128
+\c_one_hundred_million=\count129
+\c_five_hundred_million=\count130
+\c_one_thousand_million=\count131
+\c_fp_pi_by_four_decimal_int=\count132
+\c_fp_pi_by_four_extended_int=\count133
+\c_fp_pi_decimal_int=\count134
+\c_fp_pi_extended_int=\count135
+\c_fp_two_pi_decimal_int=\count136
+\c_fp_two_pi_extended_int=\count137
+\l_fp_count_int=\count138
+\l_fp_div_offset_int=\count139
+\l_fp_exp_integer_int=\count140
+\l_fp_exp_decimal_int=\count141
+\l_fp_exp_extended_int=\count142
+\l_fp_exp_exponent_int=\count143
+\l_fp_input_a_sign_int=\count144
+\l_fp_input_a_integer_int=\count145
+\l_fp_input_a_decimal_int=\count146
+\l_fp_input_a_exponent_int=\count147
+\l_fp_input_b_sign_int=\count148
+\l_fp_input_b_integer_int=\count149
+\l_fp_input_b_decimal_int=\count150
+\l_fp_input_b_exponent_int=\count151
+\l_fp_input_a_extended_int=\count152
+\l_fp_input_b_extended_int=\count153
+\l_fp_mul_a_i_int=\count154
+\l_fp_mul_a_ii_int=\count155
+\l_fp_mul_a_iii_int=\count156
+\l_fp_mul_a_iv_int=\count157
+\l_fp_mul_a_v_int=\count158
+\l_fp_mul_a_vi_int=\count159
+\l_fp_mul_b_i_int=\count160
+\l_fp_mul_b_ii_int=\count161
+\l_fp_mul_b_iii_int=\count162
+\l_fp_mul_b_iv_int=\count163
+\l_fp_mul_b_v_int=\count164
+\l_fp_mul_b_vi_int=\count165
+\l_fp_mul_output_int=\count166
+\l_fp_output_sign_int=\count167
+\l_fp_output_integer_int=\count168
+\l_fp_output_decimal_int=\count169
+\l_fp_output_exponent_int=\count170
+\l_fp_output_extended_int=\count171
+\l_fp_round_position_int=\count172
+\l_fp_round_target_int=\count173
+\l_fp_split_sign_int=\count174
+\l_fp_tmp_int=\count175
+\l_fp_trig_octant_int=\count176
+\l_fp_trig_sign_int=\count177
+\l_fp_trig_decimal_int=\count178
+\l_fp_trig_extended_int=\count179
+\l_fp_tmp_dim=\dimen124
+\l_fp_tmp_skip=\skip56
 )
 (/usr/local/texlive/2010/texmf-dist/tex/latex/expl3/l3luatex.sty
 Package: l3luatex 2010/07/18 v1985 L3 Experimental LuaTeX functions
-\g_cctab_allocate_int=\count168
-\g_cctab_stack_int=\count169
+\g_cctab_allocate_int=\count180
+\g_cctab_stack_int=\count181
 )
 (/usr/local/texlive/2010/texmf-dist/tex/latex/expl3/l3font.sty
 Package: l3font 2011/03/03 v2175 L3 Experimental Font Loading
 )
 (/usr/local/texlive/2010/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count170
-\calc@Bcount=\count171
-\calc@Adimen=\dimen116
-\calc@Bdimen=\dimen117
-\calc@Askip=\skip54
-\calc@Bskip=\skip55
+\calc@Acount=\count182
+\calc@Bcount=\count183
+\calc@Adimen=\dimen125
+\calc@Bdimen=\dimen126
+\calc@Askip=\skip57
+\calc@Bskip=\skip58
 LaTeX Info: Redefining \setlength on input line 76.
 LaTeX Info: Redefining \addtolength on input line 77.
-\calc@Ccount=\count172
-\calc@Cskip=\skip56
+\calc@Ccount=\count184
+\calc@Cskip=\skip59
 ))
 Package: siunitx 2011/04/20 v2.2c A comprehensive (SI) units package
 
 (/usr/local/texlive/2010/texmf-dist/tex/latex/xpackages/xbase/xparse.sty
 Package: xparse 2011/01/23 v2136 Generic document command parser
-\c_xparse_shorthands_prop=\toks37
-\l_xparse_m_args_int=\count173
-\l_xparse_mandatory_args_int=\count174
-\l_xparse_processor_int=\count175
-\l_xparse_total_args_int=\count176
+\c_xparse_shorthands_prop=\toks42
+\l_xparse_m_args_int=\count185
+\l_xparse_mandatory_args_int=\count186
+\l_xparse_processor_int=\count187
+\l_xparse_total_args_int=\count188
 )
-(/usr/local/texlive/2010/texmf-dist/tex/latex/amsmath/amstext.sty
-Package: amstext 2000/06/29 v2.01
-
-(/usr/local/texlive/2010/texmf-dist/tex/latex/amsmath/amsgen.sty
-File: amsgen.sty 1999/11/30 v2.0
-\@emptytoks=\toks38
-\ex@=\dimen118
-))
 (/usr/local/texlive/2010/texmf-dist/tex/latex/tools/array.sty
 Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
-\col@sep=\dimen119
-\extrarowheight=\dimen120
-\NC@list=\toks39
-\extratabsurround=\skip57
-\backup@length=\skip58
+\col@sep=\dimen127
+\extrarowheight=\dimen128
+\NC@list=\toks43
+\extratabsurround=\skip60
+\backup@length=\skip61
 )
 (/usr/local/texlive/2010/texmf-dist/tex/latex/xpackages/xtras/l3keys2e.sty
 Package: l3keys2e 2010/10/13 v2076 Parsing LaTeX3 keyvals as LaTeX2e package op
 tions
 )
-\l_siunitx_tmp_box=\box28
-\l_siunitx_tmp_int=\count177
-\l_siunitx_number_in_prop=\toks40
-\l_siunitx_number_mantissa_length_int=\count178
-\l_siunitx_number_uncert_length_int=\count179
-\l_siunitx_round_int=\count180
-\l_siunitx_process_decimal_int=\count181
-\l_siunitx_process_uncertainty_int=\count182
-\l_siunitx_process_fixed_int=\count183
-\l_siunitx_process_integer_min_int=\count184
-\l_siunitx_process_precision_int=\count185
-\l_siunitx_number_out_prop=\toks41
-\l_siunitx_angle_marker_box=\box29
-\l_siunitx_angle_unit_box=\box30
-\l_siunitx_angle_marker_dim=\dimen121
-\l_siunitx_angle_unit_dim=\dimen122
-\l_siunitx_angle_degree_prop=\toks42
-\l_siunitx_angle_minute_prop=\toks43
-\l_siunitx_angle_second_prop=\toks44
-\l_siunitx_unit_int=\count186
-\l_siunitx_unit_prop=\toks45
-\l_siunitx_unit_denominator_int=\count187
-\l_siunitx_unit_numerator_int=\count188
-\l_siunitx_unit_prefix_int=\count189
-\l_siunitx_unit_prefix_base_int=\count190
-\l_siunitx_unit_prefix_gram_int=\count191
-\l_siunitx_number_product_int=\count192
-\c_siunitx_one_fill_skip=\skip59
-\l_siunitx_table_unit_align_skip=\skip60
-\l_siunitx_table_fill_box=\box31
-\l_siunitx_table_fill_dim=\dimen123
-\l_siunitx_table_pre_box=\box32
-\l_siunitx_table_post_box=\box33
-\l_siunitx_table_result_box=\box34
-\l_siunitx_table_comparator_dim=\dimen124
-\l_siunitx_table_decimal_dim=\dimen125
-\l_siunitx_table_exponent_dim=\dimen126
-\l_siunitx_table_integer_dim=\dimen127
-\l_siunitx_table_mantissa_dim=\dimen128
-\l_siunitx_table_marker_dim=\dimen129
-\l_siunitx_table_result_dim=\dimen130
-\l_siunitx_table_uncert_dim=\dimen131
-\l_siunitx_table_gap_dim=\dimen132
-\l_siunitx_table_model_prop=\toks46
-\l_siunitx_table_space_dim=\dimen133
-\l_siunitx_table_number_align_skip=\skip61
-\l_siunitx_table_text_align_skip=\skip62
-\l_siunitx_table_decimal_int=\count193
-\l_siunitx_table_exponent_int=\count194
-\l_siunitx_table_integer_int=\count195
-\l_siunitx_table_uncert_int=\count196
+\l_siunitx_tmp_box=\box30
+\l_siunitx_tmp_int=\count189
+\l_siunitx_number_in_prop=\toks44
+\l_siunitx_number_mantissa_length_int=\count190
+\l_siunitx_number_uncert_length_int=\count191
+\l_siunitx_round_int=\count192
+\l_siunitx_process_decimal_int=\count193
+\l_siunitx_process_uncertainty_int=\count194
+\l_siunitx_process_fixed_int=\count195
+\l_siunitx_process_integer_min_int=\count196
+\l_siunitx_process_precision_int=\count197
+\l_siunitx_number_out_prop=\toks45
+\l_siunitx_angle_marker_box=\box31
+\l_siunitx_angle_unit_box=\box32
+\l_siunitx_angle_marker_dim=\dimen129
+\l_siunitx_angle_unit_dim=\dimen130
+\l_siunitx_angle_degree_prop=\toks46
+\l_siunitx_angle_minute_prop=\toks47
+\l_siunitx_angle_second_prop=\toks48
+\l_siunitx_unit_int=\count198
+\l_siunitx_unit_prop=\toks49
+\l_siunitx_unit_denominator_int=\count199
+\l_siunitx_unit_numerator_int=\count200
+\l_siunitx_unit_prefix_int=\count201
+Normal \count register pool exhausted, switching to extended pool.
+\l_siunitx_unit_prefix_base_int=\count277
+\l_siunitx_unit_prefix_gram_int=\count278
+\l_siunitx_number_product_int=\count279
+\c_siunitx_one_fill_skip=\skip62
+\l_siunitx_table_unit_align_skip=\skip63
+\l_siunitx_table_fill_box=\box33
+\l_siunitx_table_fill_dim=\dimen131
+\l_siunitx_table_pre_box=\box34
+\l_siunitx_table_post_box=\box35
+\l_siunitx_table_result_box=\box36
+\l_siunitx_table_comparator_dim=\dimen132
+\l_siunitx_table_decimal_dim=\dimen133
+\l_siunitx_table_exponent_dim=\dimen134
+\l_siunitx_table_integer_dim=\dimen135
+\l_siunitx_table_mantissa_dim=\dimen136
+\l_siunitx_table_marker_dim=\dimen137
+\l_siunitx_table_result_dim=\dimen138
+\l_siunitx_table_uncert_dim=\dimen139
+\l_siunitx_table_gap_dim=\dimen140
+\l_siunitx_table_model_prop=\toks50
+\l_siunitx_table_space_dim=\dimen141
+\l_siunitx_table_number_align_skip=\skip64
+\l_siunitx_table_text_align_skip=\skip65
+\l_siunitx_table_decimal_int=\count280
+\l_siunitx_table_exponent_int=\count281
+\l_siunitx_table_integer_int=\count282
+\l_siunitx_table_uncert_int=\count283
  LaTeX info: Defining document command \DeclareBinaryPrefix
 (LaTeX)  with arg. spec. 'mmm' on line 6790.
 
@@ -852,33 +913,33 @@ e
 (./2.aux)
 \openout1 = `2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-\AtBeginShipoutBox=\box35
-Package hyperref Info: Link coloring OFF on input line 16.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+\AtBeginShipoutBox=\box37
+Package hyperref Info: Link coloring OFF on input line 17.
  (/usr/local/texlive/2010/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
 
 (/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count197
+\c@section@level=\count284
 )
-LaTeX Info: Redefining \ref on input line 16.
-LaTeX Info: Redefining \pageref on input line 16.
-LaTeX Info: Redefining \nameref on input line 16.
+LaTeX Info: Redefining \ref on input line 17.
+LaTeX Info: Redefining \pageref on input line 17.
+LaTeX Info: Redefining \nameref on input line 17.
 
 (./2.out) (./2.out)
 \@outlinefile=\write3
@@ -887,17 +948,16 @@ LaTeX Info: Redefining \nameref on input line 16.
 
 (/usr/local/texlive/2010/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count198
-\scratchdimen=\dimen134
-\scratchbox=\box36
-\nofMPsegments=\count199
-\nofMParguments=\count200
-\everyMPshowfont=\toks47
-\MPscratchCnt=\count201
-\MPscratchDim=\dimen135
-Normal \count register pool exhausted, switching to extended pool.
-\MPnumerator=\count277
-\everyMPtoPDFconversion=\toks48
+\scratchcounter=\count285
+\scratchdimen=\dimen142
+\scratchbox=\box38
+\nofMPsegments=\count286
+\nofMParguments=\count287
+\everyMPshowfont=\toks51
+\MPscratchCnt=\count288
+\MPscratchDim=\dimen143
+\MPnumerator=\count289
+\everyMPtoPDFconversion=\toks52
 )
 Now handling font encoding TS1 ...
 ... processing UTF-8 mapping file for font encoding TS1
@@ -977,30 +1037,34 @@ File: ts1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
 r-basic-dictionary/translator-basic-dictionary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 )
-\c_siunitx_mathsf_int=\count278
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 16.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 16.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 16.
-\c_siunitx_mathtt_int=\count279
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 26.
+\c_siunitx_mathsf_int=\count290
+LaTeX Font Info:    Try loading font information for U+msa on input line 17.
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 17.
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+)
+\c_siunitx_mathtt_int=\count291
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 27.
 
 (/usr/local/texlive/2010/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 28.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 29.
 
 (/usr/local/texlive/2010/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-Overfull \hbox (3.34592pt too wide) in paragraph at lines 31--37
+Overfull \hbox (3.34592pt too wide) in paragraph at lines 32--38
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 39--40
+Underfull \hbox (badness 10000) in paragraph at lines 40--41
 
  []
 
@@ -1012,17 +1076,17 @@ Package epstopdf Info: Source file: <2_1/data/runs.eps>
 (epstopdf)                    size: 12016 bytes
 (epstopdf)             Command: <repstopdf --outfile=2_1/data/runs-eps-converte
 d-to.pdf 2_1/data/runs.eps>
-(epstopdf)             \includegraphics on input line 45.
+(epstopdf)             \includegraphics on input line 46.
 Package epstopdf Info: Output file is already uptodate.
 <2_1/data/runs-eps-converted-to.pdf, id=16, 361.35pt x 216.81pt>
 File: 2_1/data/runs-eps-converted-to.pdf Graphic file (type pdf)
 
 <use 2_1/data/runs-eps-converted-to.pdf>
 Package pdftex.def Info: 2_1/data/runs-eps-converted-to.pdf used on input line 
-45.
+46.
 (pdftex.def)             Requested size: 292.7776pt x 175.66806pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 48--49
+Underfull \hbox (badness 10000) in paragraph at lines 49--50
 
  []
 
@@ -1034,21 +1098,17 @@ Package epstopdf Info: Source file: <2_1/data/time.eps>
 (epstopdf)                    size: 12131 bytes
 (epstopdf)             Command: <repstopdf --outfile=2_1/data/time-eps-converte
 d-to.pdf 2_1/data/time.eps>
-(epstopdf)             \includegraphics on input line 53.
+(epstopdf)             \includegraphics on input line 54.
 Package epstopdf Info: Output file is already uptodate.
 <2_1/data/time-eps-converted-to.pdf, id=17, 361.35pt x 216.81pt>
 File: 2_1/data/time-eps-converted-to.pdf Graphic file (type pdf)
 
 <use 2_1/data/time-eps-converted-to.pdf>
 Package pdftex.def Info: 2_1/data/time-eps-converted-to.pdf used on input line 
-53.
+54.
 (pdftex.def)             Requested size: 292.7776pt x 175.66806pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 58--60
+Underfull \hbox (badness 10000) in paragraph at lines 59--61
 
  []
 
@@ -1064,7 +1124,7 @@ Package epstopdf Info: Source file: <2_1/data/opt.eps>
 (epstopdf)                    size: 14760 bytes
 (epstopdf)             Command: <repstopdf --outfile=2_1/data/opt-eps-converted
 -to.pdf 2_1/data/opt.eps>
-(epstopdf)             \includegraphics on input line 65.
+(epstopdf)             \includegraphics on input line 66.
 Package epstopdf Info: Output file is already uptodate.
 
 <2_1/data/opt-eps-converted-to.pdf, id=37, 361.35pt x 216.81pt>
@@ -1072,15 +1132,17 @@ File: 2_1/data/opt-eps-converted-to.pdf Graphic file (type pdf)
 
 <use 2_1/data/opt-eps-converted-to.pdf>
 Package pdftex.def Info: 2_1/data/opt-eps-converted-to.pdf used on input line 6
-5.
+6.
 (pdftex.def)             Requested size: 292.7776pt x 175.66806pt.
 
-Overfull \hbox (24.74796pt too wide) in paragraph at lines 79--83
+Overfull \hbox (75.6733pt too wide) in paragraph at lines 80--84
 [][] 
  []
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
+
+ []
 
 [2 <./2_1/data/time-eps-converted-to.pdf> <./2_1/data/opt-eps-converted-to.pdf>
 ]
@@ -1092,55 +1154,76 @@ Package epstopdf Info: Source file: <2_3/data/matmult.eps>
 (epstopdf)                    size: 12961 bytes
 (epstopdf)             Command: <repstopdf --outfile=2_3/data/matmult-eps-conve
 rted-to.pdf 2_3/data/matmult.eps>
-(epstopdf)             \includegraphics on input line 89.
+(epstopdf)             \includegraphics on input line 91.
 Package epstopdf Info: Output file is already uptodate.
  <2_3/data/matmult-eps-converted-to.pdf, id=54, 361.35pt x 216.81pt>
 File: 2_3/data/matmult-eps-converted-to.pdf Graphic file (type pdf)
 
 <use 2_3/data/matmult-eps-converted-to.pdf>
 Package pdftex.def Info: 2_3/data/matmult-eps-converted-to.pdf used on input li
-ne 89.
+ne 91.
 (pdftex.def)             Requested size: 292.7776pt x 175.66806pt.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 92.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 92.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 97.
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--97
+
+ []
+
+Package epstopdf Info: Source file: <2_3/data/opt.eps>
+(epstopdf)                    date: 2014-11-02 17:56:59
+(epstopdf)                    size: 33958 bytes
+(epstopdf)             Output file: <2_3/data/opt-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-11-02 17:57:17
+(epstopdf)                    size: 13039 bytes
+(epstopdf)             Command: <repstopdf --outfile=2_3/data/opt-eps-converted
+-to.pdf 2_3/data/opt.eps>
+(epstopdf)             \includegraphics on input line 101.
+Package epstopdf Info: Output file is already uptodate.
+<2_3/data/opt-eps-converted-to.pdf, id=57, 361.35pt x 216.81pt>
+File: 2_3/data/opt-eps-converted-to.pdf Graphic file (type pdf)
+
+<use 2_3/data/opt-eps-converted-to.pdf>
+Package pdftex.def Info: 2_3/data/opt-eps-converted-to.pdf used on input line 1
+01.
+(pdftex.def)             Requested size: 292.7776pt x 175.66806pt.
  [3 <./2_3/data/matmult-eps-converted-to.pdf>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 97.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 134.
+ [4 <./2_3/data/opt-eps-converted-to.pdf>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 134.
  (./2.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 97.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 97.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 134.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 134.
 Package rerunfilecheck Info: File `2.out' has not changed.
 (rerunfilecheck)             Checksum: 35BEEA8E189478AC3F194614E9D78223;204.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 97.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 134.
  ) 
 Here is how much of TeX's memory you used:
- 13929 strings out of 493763
- 269203 string characters out of 3144975
- 310877 words of memory out of 3000000
- 17019 multiletter control sequences out of 15000+200000
- 17876 words of font info for 48 fonts, out of 3000000 for 9000
+ 14792 strings out of 493763
+ 279090 string characters out of 3144975
+ 322267 words of memory out of 3000000
+ 17847 multiletter control sequences out of 15000+200000
+ 21992 words of font info for 66 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 44i,8n,47p,495b,549s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,8n,47p,516b,553s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2010/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
-</usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
-/usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
-sr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/
-local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/l
-ocal/texlive/2010/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/loc
-al/texlive/2010/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local
-/texlive/2010/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/t
-exlive/2010/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/tex
-live/2010/texmf-dist/fonts/type1/public/cm-super/sfrm2488.pfb></usr/local/texli
-ve/2010/texmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb></usr/local/texlive
-/2010/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2
-010/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb></usr/local/texlive/201
-0/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on 2.pdf (3 pages, 246598 bytes).
+</usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><
+/usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
+r/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/l
+ocal/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/lo
+cal/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></us
+r/local/texlive/2010/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/
+local/texlive/2010/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/lo
+cal/texlive/2010/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/loca
+l/texlive/2010/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/
+texlive/2010/texmf-dist/fonts/type1/public/cm-super/sfrm2488.pfb></usr/local/te
+xlive/2010/texmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb></usr/local/texl
+ive/2010/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texliv
+e/2010/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb></usr/local/texlive/
+2010/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
+Output written on 2.pdf (4 pages, 275903 bytes).
 PDF statistics:
- 120 PDF objects out of 1000 (max. 8388607)
- 89 compressed objects within 1 object stream
- 8 named destinations out of 1000 (max. 500000)
- 45 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 140 PDF objects out of 1000 (max. 8388607)
+ 102 compressed objects within 2 object streams
+ 9 named destinations out of 1000 (max. 500000)
+ 50 words of extra memory for PDF output out of 10000 (max. 10000000)
 
