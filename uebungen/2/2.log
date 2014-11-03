@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.8.26)  3 NOV 2014 22:06
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.8.26)  3 NOV 2014 22:12
 entering extended mode
 **2.tex
 ("C:\Users\Alexander Schnapp\Documents\GitHub\IntroHPC\uebungen\2\2.tex"
@@ -1163,17 +1163,12 @@ Package epstopdf Info: Source file: <./2_2/bild.eps>
 (epstopdf)                    date: 2014-11-03 22:06:29
 (epstopdf)                    size: 46051 bytes
 (epstopdf)             Output file: <./2_2/bild-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-11-03 22:05:45
-(epstopdf)                    size: 2231 bytes
+(epstopdf)                    date: 2014-11-03 22:06:35
+(epstopdf)                    size: 15777 bytes
 (epstopdf)             Command: <epstopdf --outfile=./2_2/bild-eps-converted-to
 .pdf ./2_2/bild.eps>
 (epstopdf)             \includegraphics on input line 77.
-runsystem(epstopdf --outfile=./2_2/bild-eps-converted-to.pdf ./2_2/bild.eps)...
-executed (allowed).
-
-Package epstopdf Info: Result file: <./2_2/bild-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-11-03 22:06:35
-(epstopdf)                    size: 15777 bytes.
+Package epstopdf Info: Output file is already uptodate.
  <./2_2/bild-eps-converted-to.pdf, id=53, 361.35pt x 216.81pt>
 File: ./2_2/bild-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -1248,13 +1243,13 @@ Package rerunfilecheck Info: File `2.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 140.
  ) 
 Here is how much of TeX's memory you used:
- 16014 strings out of 493921
- 298084 string characters out of 3144840
+ 16013 strings out of 493921
+ 298069 string characters out of 3144840
  354749 words of memory out of 3000000
- 19062 multiletter control sequences out of 15000+200000
+ 19061 multiletter control sequences out of 15000+200000
  21992 words of font info for 66 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 44i,8n,47p,524b,758s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,8n,47p,535b,758s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Alexander Schnapp\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
 n\ec\dpi600\ectt0900.pk> <C:\Users\Alexander Schnapp\AppData\Local\MiKTeX\2.9\f
 onts\pk\ljfour\jknappen\ec\dpi600\ecrm0600.pk> <C:\Users\Alexander Schnapp\AppD
@@ -1273,9 +1268,9 @@ type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/typ
 e1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/p
 ublic/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pub
 lic/amsfonts/symbols/msam10.pfb>
-Output written on 2.pdf (5 pages, 206585 bytes).
+Output written on 2.pdf (5 pages, 206857 bytes).
 PDF statistics:
- 356 PDF objects out of 1000 (max. 8388607)
+ 357 PDF objects out of 1000 (max. 8388607)
  10 named destinations out of 1000 (max. 500000)
  55 words of extra memory for PDF output out of 10000 (max. 10000000)
 
