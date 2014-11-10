@@ -45,7 +45,17 @@ Mit den Werten der TOP500 Liste jeweils aus dem November 2007 und 2011 ergibt si
 Also ein Vedopplung alle 11.3 Monate statt alle 18 Monate wie von Moore vorhergesagt. Damit wir auch ein Exaflop früher erreicht, und zwar in 3.9 Jahren.\\
 
 \subsection{Amdahls Law}
-
+\paragraph*{b)}Verbessert man die Wurzelberechnung um einen Faktor von 10 benötigt man noch ($20/10+80=82$) $82\%$ der zuvor benötigten Zeit. Im Falle der Verbesserung der generellen FP Rechnungen kommt man auf $50+50/1,6=81,25$. Man Braucht also mit etwa $81\%$ knapp weniger Zeit.
+\paragraph*{c)}
+Es gilt Amdahls Law:
+\[
+Speedup=\frac{1}{(1-P)+P/N}
+\] 
+Löst man dieses nach $P$ auf und setzt $N=128$ und den gewünschten Speedup von 100 ein so kommt man auf
+\[
+P=\frac{\frac{1}{Speedup}-1}{1/N-1}=0.9978
+\]
+und damit auf einen maximalen seriellen Anteil von 0,22\%.
 \subsection{Measure Latency}
 
 Der Quelltext liegt unter \verb+../3/3_3/pingpong.cpp+. Makefile zum Compilieren und ausführen liegt bei. \\
