@@ -7,7 +7,7 @@ using namespace std;
 
 void fill_array(double* ary, int s){
     srand(time(NULL));
-    for (int i = 0, i<s; i++){
+    for (int i = 0; i<s; i++){
         ary[i] = (double)rand()/(double)rand(RAND_MAX);
     }
 }
