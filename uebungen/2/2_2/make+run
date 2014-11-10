@@ -1,0 +1,9 @@
+
+mpic++ -o 2_2 2_2.cc
+
+rm data.dat
+
+for ((i=2;i<25;i=i+2))
+	do
+		mpirun -host creek07,creek06 -np $i ./2_2 100 $i >>data.dat
+	done
