@@ -45,6 +45,7 @@ Mit den Werten der TOP500 Liste jeweils aus dem November 2007 und 2011 ergibt si
 Also ein Vedopplung alle 11.3 Monate statt alle 18 Monate wie von Moore vorhergesagt. Damit wir auch ein Exaflop früher erreicht, und zwar in 3.9 Jahren.\\
 
 \subsection{Amdahls Law}
+\paragraph*{a)} Mitthilfe einer Verbessurung die durch Ambdahl beschrieben würde, käme man höchstens auf eine Verbesserung um den Faktor 1,6.
 \paragraph*{b)}Verbessert man die Wurzelberechnung um einen Faktor von 10 benötigt man noch ($20/10+80=82$) $82\%$ der zuvor benötigten Zeit. Im Falle der Verbesserung der generellen FP Rechnungen kommt man auf $50+50/1,6=81,25$. Man Braucht also mit etwa $81\%$ knapp weniger Zeit.
 \paragraph*{c)}
 Es gilt Amdahls Law:
@@ -80,5 +81,23 @@ Dabei fallen drei sachen auf:
 
 
 \subsection{Measure Bandwidth}
+Der Quelltext liegt unter \verb+../3/3_4/flood_test.cc+. Makefile zum Compilieren und ausführen liegt bei. 
 
+Hier soll die Bandbreite des Systems auf verschiedene Art und weise bestimmt werden. Zunächst senden wir mittels eines blockierenden Sendebefehls anschließend mittels eines nicht blockierenden. Dabei variiert die Größe der gesendeten Daten zwischen 1 KB und 16 MB und verdoppelt sich bei jedem Messpunkt. Des Weiteren wird unterschieden ob die verschiedenen Prozesse auf dem selben oder einem anderen Knoten laufen. Unter Einbezug einer doppelt-logarithmischen Skala ergibt sich folgendes Messergebnis:
+
+
+\begin{figure}[h!]
+\includegraphics[width=\linewidth,
+keepaspectratio]{3_4/bild}
+\centering
+\end{figure}
+
+
+Es is zu sehen dass:
+\begin{itemize}
+\item Für ein blockendes send auf einem knoten ist die bandbreite deutlich größer als auf 2 Knoten. Wahrscheinlich da die Bandbreite durch die Ethernet Verbindung begrenzt ist.
+\item Für das blockende send auf 2 Knoten ist die Bandbreite quasi unabhängig von der Nachrichten Größe wohingegen sie bei einem Knoten erst ansteigt und dann bei etwa 20KB einen stabilen Wert erreicht. 
+\item Bei nicht blockierenden send ist der Unterschied nicht so gravierend. Wahrscheinlich weil für ein nicht blockierendes send , nicht gewartet wird bis die entsprechende Nachricht auch angekommen ist.
+\item Bei nicht blockierenden send ist die Bandbreite generell höher und erreicht in unseren Messungen stetig an, aus dem selben Grund wie zuvor.
+\end{itemize}
 \end{document}
