@@ -1,4 +1,4 @@
-2_1:
+3_3:
 	mpic++ -o pp pingpong.cpp
 
 clean:
@@ -8,4 +8,4 @@ run_single:
 	mpirun -host creek04,creek04 -np 2 ./pp
 
 run_double:
-	mpirun -host creek04,creek05 -np 2 ./pp
+	mpirun -host creek04,creek06 -np 2 ./pp

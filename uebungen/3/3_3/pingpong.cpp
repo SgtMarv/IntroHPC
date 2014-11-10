@@ -1,5 +1,7 @@
 #include <iostream>
 #include <stdlib.h>
+#include <cstring>
+#include <sys/time.h>
 #include <math.h>
 #include <mpi.h>
 
@@ -8,7 +10,7 @@ using namespace std;
 void fill_array(double* ary, int s){
     srand(time(NULL));
     for (int i = 0; i<s; i++){
-        ary[i] = (double)rand()/(double)rand(RAND_MAX);
+        ary[i] = (double)rand()/(double)(RAND_MAX);
     }
 }
 
@@ -22,7 +24,8 @@ int main(int argc, char **argv){
     double time_gnuplot[msg_size+1][msg_count];  //for nice formating 
 
     int rank, size, signal;         //MPI vars
-    MPI_Status status;
+    MPI_Status status;	
+    MPI_Request request;
     
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
     MPI_Comm_size(MPI_COMM_WORLD, &size);
@@ -40,16 +43,16 @@ int main(int argc, char **argv){
             if (rank == 0){
                 time = 0.0;
                 a = MPI_Wtime();
-                MPI_ISend(signal, size*16, MPI_DOUBLE, 1, 0, MPI_COMM_WORLD);
+                MPI_Isend(signal, size*16, MPI_DOUBLE, 1, 0, MPI_COMM_WORLD,&request);
                 MPI_Recv(signal, size*16, MPI_DOUBLE, 1, 0, MPI_COMM_WORLD,&status);
-                b = MPI_WTtime();
+                b = MPI_Wtime();
                 time += b-a;
                 time_gnuplot[j][i] = time/2.0;    //half round trip latency
             }
             else{
                 if (rank == 1){   //avoid starvation if more than two proc
                     MPI_Recv(signal,size*16,MPI_DOUBLE,0,0,MPI_COMM_WORLD,&status);
-                    MPI_ISend(signal,size*16,MPI_DOUBLE,0,0,MPI_COMM_WORLD);
+                    MPI_Isend(signal,size*16,MPI_DOUBLE,0,0,MPI_COMM_WORLD,&request);
                 }
             }
         }//end of mesage count loop
@@ -57,5 +60,9 @@ int main(int argc, char **argv){
         signal = NULL;
     }//end of size loop
 
+
+
+
+    MPI_Finalize();
     return 0;
 }
