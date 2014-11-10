@@ -33,24 +33,24 @@ int main(int argc, char **argv){
     //start latency loops
     for (int j = 0; j<=msg_size; j++){      // outer loop over mesage size
         int msize = (int)pow(2,j);           // 2**j KB of data
-        double* signal = new double [msize*16]; //16 double = 1KB
+        double* signal = new double [msize*128]; //128 double = 1KB
         if (rank ==0){                      // fill array with random doubles 
-            fill_array(signal,msize*16);
+            fill_array(signal,msize*128);
         }
 
         for (int i = 0; i<msg_count; i++){ //inner loop for number of messages
             if (rank == 0){
                 a = MPI_Wtime();
-                MPI_Send(signal, msize*16, MPI_DOUBLE, 1, 0, MPI_COMM_WORLD);
-                MPI_Recv(signal, msize*16, MPI_DOUBLE, 1, 0, MPI_COMM_WORLD,&status);
+                MPI_Send(signal, msize*128, MPI_DOUBLE, 1, 0, MPI_COMM_WORLD);
+                MPI_Recv(signal, msize*128, MPI_DOUBLE, 1, 0, MPI_COMM_WORLD,&status);
                 b = MPI_Wtime();
                 time = b-a;
                 time_gnuplot[i][j] = time/2.0;    //half round trip latency
             }
             else{
                 if (rank == 1){   //avoid starvation if more than two proc
-                    MPI_Recv(signal,msize*16,MPI_DOUBLE,0,0,MPI_COMM_WORLD,&status);
-                    MPI_Send(signal,msize*16,MPI_DOUBLE,0,0,MPI_COMM_WORLD);
+                    MPI_Recv(signal,msize*128,MPI_DOUBLE,0,0,MPI_COMM_WORLD,&status);
+                    MPI_Send(signal,msize*128,MPI_DOUBLE,0,0,MPI_COMM_WORLD);
                 }
             }
         }//end of mesage count loop
