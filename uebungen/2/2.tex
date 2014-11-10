@@ -70,7 +70,13 @@ Dadurch verringert sich die Zeit pro Nachricht auf \SI[multi-part-units=single]{
 
 
 \subsection{Barrier Synchronization}
+Quelltext zur aufgabe liegt unter \verb+../2/2_2/2_2.cc+. Hier liegt auch das passende File 'make+run' zur Compilierung und Ausführung. Dies startet einen Test für 100 Barriers mit unterschiedlich vielen Prozessen von 2..24. Benutzt werden dabei \verb+creek07+ und \verb+creek06+. Das Programm testet dabei sowohl unsere eigene zentrale Barrier-Varriante alsauch die MPI\_Barrier() Funktion. Unsere eigene Funktion is dabei stets etwa halb so schnell vergleicht man die jeweile Zeit die pro Barrier vergeht.
 
+\begin{figure}[!ht]
+\includegraphics[width=\linewidth,
+keepaspectratio]{./2_2/bild.eps}
+\centering
+\end{figure}
 
 \subsection{Matrix multiply – sequential version}
 

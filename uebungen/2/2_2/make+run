@@ -5,5 +5,5 @@ rm data.dat
 
 for ((i=2;i<25;i=i+2))
 	do
-		mpirun -host creek07,creek06 -np $i ./2_2 100 $i >>data.dat
+		mpirun -host creek08,creek07,creek06,creek05 -np $i ./2_2 1000 $i >>data.dat
 	done
