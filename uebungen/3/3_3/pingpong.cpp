@@ -60,6 +60,15 @@ int main(int argc, char **argv){
         signal = NULL;
     }//end of size loop
 
+    for (int j=0; j<=msg_size; j++){
+        for (int i=0; i<msg_count;i++){
+            cout << time_gnuplot[j][i] << " ";
+            if (i==msg_count-1){
+                cout << "\n";
+            }
+        }
+    }
+
 
 
 
