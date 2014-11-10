@@ -42,8 +42,8 @@ Parameter \verb+$v+ für Ausgabe der Zeit, \verb+1+ für nett formatiert, \verb+
 Plot unten zeigt durchschnittliche Zeit pro Nachricht bei 12 Prozessen. Jeder run wurde 20 mal gemessen um den Fehler in der Laufzeit zu bestimmen (stabilste message size $m$). Obwohl 5 Nachrichten eine kleine Abweichung haben, haben wir für die Messung 10 Nachrichten genommen um ein wenig bessere Statistik machen zu können.
 
 \begin{figure}[!ht]
-    \centering
-    \includegraphics[width=0.7\textwidth,keepaspectratio]{2_1/data/runs.eps}
+\centering
+\includegraphics[width=0.7\textwidth,keepaspectratio]{2_1/data/runs.eps}
 \end{figure}
 
 Messung der Ausführungsdauer bei 24 Prozessen, 10 Nachrichten pro Prozess und Mapping \verb+creek01,..,creek08+. Das Programm wurde auch wieder für jede Prozessanzahl 20 mal ausgeführt. Die Ergebnisse sind unten geplottet. Die Zeit pro Nachricht steigt mit der Anzahl Prozesse leicht an und liegt bei $\approx$ \SI{0.07}{\milli\second}.\\

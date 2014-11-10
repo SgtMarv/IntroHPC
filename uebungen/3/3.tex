@@ -50,13 +50,22 @@ Also ein Vedopplung alle 11.3 Monate statt alle 18 Monate wie von Moore vorherge
 
 Der Quelltext liegt unter \verb+../3/3_3/pingpong.cpp+. Makefile zum Compilieren und ausführen liegt bei. \\
 
-Es werden pro Nachrichtengröße jeweils 8 Nachrichten geschickt (mehr hat MPI irgendwie nicht erlaubt). 
-
+Es werden pro Nachrichtengröße jeweils 8 Nachrichten geschickt (mehr hat MPI irgendwie nicht erlaubt). Das Pingpong Programm wurde zwei mal ausgeführt, einmal mit beiden Prozessen auf einer Maschine ("`Cache"' im plot) sodass der Nachrichtenaustausch via \emph{Cache} oder Hauptspeicher erfolgt. Beim zweiten Mal Ausführen würden beide Prozesse auf unterschiedlichen Rechnern (\verb+creek04+, \verb+creek06+) ausgeführt. Die Nachrichten müssen also einmal über das Netzwerk ("`Ethernet"' im plot).\\
 
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=0.7\textwidth,keepaspectratio]{3_3/data/plot.eps}
 \end{figure}
+
+Dabei fallen drei sachen auf: 
+
+\begin{itemize}
+    \item Ethernet ist $\approx 10$ mal langsamer als der Nachrichtenaustausch auf einem Rechner.
+    \item Die relativen Fehler der Durchschnittslatenz ist bei Ethernet deutlich kleiner. Ethernet ist zwar langsam aber stabil.
+    \item Die Latenz nimmt bei einer nachrichtengröße von $8kB$ deutlich ab. Vermutlich puffert MPI ausgehende Nachrichten und verschickt diese erst wenn der Puffer voll ist (oder nach gewisser Zeit). Das sorgt für hohe Latenz bei kleinen Nachrichten. Da die Latenz bei $8kB$ wieder fällt scheint der Puffer zwischen 4 und 8 $kB$ groß zu sein.
+\end{itemize}
+
+
 
 
 
