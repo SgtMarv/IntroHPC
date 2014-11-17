@@ -55,12 +55,37 @@ void Matrix_multiply(int *rank,int *size,int *numlines,int *numspalt)
 	{
 		if (i> lines1proc*ziel&&ziel<*size-1) ziel+=1;
 		MPI_Isend(&Alines[i],1,MPI_INT,ziel,0,MPI_COMM_WORLD,&request);
-	        MPI_Isend(&Blines[i],1,MPI_INT,ziel,1,MPI_COMM_WORLD,&request);
 	}
+	for(int i=1;i<*size;i++)
+	{
+	for(int j=0;j<*numlines;j++)
+	{
+	        MPI_Isend(&Blines[j],1,MPI_INT,i,j,MPI_COMM_WORLD,&request);
+	}}
 
-//		endtime=MPI_Wtime();
-//		*time2+=endtime-starttime;
-
+	//Empfangen der C-MAtrix
+	for(int i=1;i<*size-1;i++)
+	{
+		for(int j=0;j<lines1proc;j++)
+		{
+		
+		MPI_Recv(Clines[i*lines1proc+j],1,MPI_INT,i,j,MPI_COMM_WORLD,&status);
+		}
+	}	for (int j=0;j<lines1proc+(*numlines-*(size-1)*lines1proc);j++)
+		{
+		MPI_Recv(Clines[(size-1)*lines1proc],1,MPI_INT,*size,j,MPI_COMM_WORLD,&status);
+		}		
+	MPI_Barrier(MPI_COMM_WORLD);
+	endtime=MPI_Wtime();
+	
+	//Ausgabe
+	for (int i=0;i<*numlines;i++)
+	{for (int j=0;j<*numspalt;j++)
+		{ cout <<Clines[i][j]<<"\t";
+		}
+	cout <<endl;
+	}
+	cout <<"time "<<endtime-starttime<<endl;
 	//de-allocalisierung der matrizen
 
     for(int i=0;i<*numlines;i++) free(Clines[i]);
@@ -75,40 +100,73 @@ void Matrix_multiply(int *rank,int *size,int *numlines,int *numspalt)
 else if (*rank==*size){
 
 	MPI_Status status;
+	MPI_Request request;
 	int *a[*numspalt];
-	int *b[*numspalt];
-	int c;
+	int **b[*numlines];
+for(int i=0;i<*numlines;i++) int *b[i][*numspalt];
+	int c[*numspalt];
 
-	//Daten empfangen
+    //MAtrix B empfange
+    for(int i=0;i<*numlines;i++)
+	{
+		MPI_Recv(&b[i],1,MPI_INT,0,i,MPI_COMM_WORLD,&status);
+	}
+
+	//Daten matrix A empfangen : jeweiliger anteil plus rest
 	for (int i=(*rank-1)*(*numlines/(*size));i<*numlines;i++)
 	{
 		MPI_Recv(&a,1,MPI_INT,0,0,MPI_COMM_WORLD,&status);
-		MPI_Recv(&b,1,MPI_INT,0,1,MPI_COMM_WORLD,&status);
-		
-		c=0;		
-		for(int j=0;j<*numspalt;j++)
+        //c berechnen
+		for(int j=0;j<*numlines;j++)
 		{
-			c=a[j]+(b[j]);	
-		}
+	       		 c[j]=0;
+			for(int k=0;k<*numspalt;k++)
+			{
+				c[j]=*a[k]+(*b[j][k]);
+			}
+		}	
+
+	// zurücksenden
+
+	MPI_Isend(c,1,MPI_INT,0,i,MPI_COMM_WORLD,&request);
 	}
 
-	
+
+
 }
 // alle anderen slaves
 else {
-	//Daten empfangen
+
 	MPI_Status status;
+	MPI_Request request;
 	int *a[*numspalt];
-	int *b[*numspalt];
-	
+	int **b[*numlines];
+for(int i=0;i<*numlines;i++) int *b[i][*numspalt];
+	int c[*numspalt];
+
+	//Daten empfangen matrix B
+	for(int i=0;i<*numlines;i++)
+	{
+		MPI_Recv(&b[i],1,MPI_INT,0,i,MPI_COMM_WORLD,&status);
+	}
+
+	//daten empgangen part of A
 	for(int i=0;i<*numlines/(*size);i++)
 	{
 		MPI_Recv(&a,1,MPI_INT,0,0,MPI_COMM_WORLD,&status);
-		MPI_Recv(&b,1,MPI_INT,0,1,MPI_COMM_WORLD,&status);
+        //c berechnen
+		
+		for(int j=0;j<*numlines;j++)
+		{	c[j]=0;
+		for(int k=0;k<*numspalt;k++)
+		{
+			c[j]+=*a[k]+(*b[j][k]);
+		}}
 
+	//sending back
+	MPI_Isend(c,1,MPI_INT,0,i,MPI_COMM_WORLD,&request);
 	}
 }
-
 }
 
 int main(int argc, char **argv)
