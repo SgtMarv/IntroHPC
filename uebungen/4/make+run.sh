@@ -1,3 +1,3 @@
-mpic++ matrix_multiply.cc -o mamu
+mpic++ matrix_multiply2.cc -o mamu
 
-mpirun -host creek05 -np 3 ./mamu 
+mpirun -host creek01,creek02,creek03,creek04 -np 16 ./mamu  
