@@ -54,7 +54,7 @@ double iteration(double* grid, int n){
         for (int j = 0; j<n; j++){
             if(!(i==0 || i+1==n || j==0 || j+1==n)){    // dont iterate border points
                 //                                          orig       left           right         top             bottom
-                grid[i*n+j]=x[i*n+j] + 24.0/100.0 * ((-4) * x[i*n+j] + x[i*n+(j-1)] + x[i*n+(j+1)] + x[(i-1)*n+j] + x[(i+1)*n+j]);
+                grid[i*n+j]=x[i*n+j] + 0.24 * ((-4.0) * x[i*n+j] + x[i*n+(j-1)] + x[i*n+(j+1)] + x[(i-1)*n+j] + x[(i+1)*n+j]);
             }
         }
     }
