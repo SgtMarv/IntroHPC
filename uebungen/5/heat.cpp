@@ -75,7 +75,7 @@ void print_state(double* grid, int n, int it){
     outfile.open(name);
     for (int i = 0; i<n; i++){
         for (int j = 0; j<n; j++){
-            outfile << i << " " << j << " " << grid[i*n+j] << endl;
+            outfile << j << " " << i << " " << grid[i*n+j] << endl;
         }
     }
     outfile.close();
