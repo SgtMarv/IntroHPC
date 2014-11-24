@@ -117,6 +117,7 @@ int main (int argc, char** argv){
 
     cout << "Total time: \t\t" << time_sum << endl;
     cout << "Time/Iteration: \t" << time_sum/iter << endl;
+    cout << "GLOPS: \t\t" << (pow(10,-9) * n*n * 7)/(time_sum/iter) << endl;
 
     return 0;
 }

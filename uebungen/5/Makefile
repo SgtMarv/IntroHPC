@@ -1,5 +1,5 @@
 5: 
-	g++ -o heat heat.cpp
+	g++ -O2 -o heat heat.cpp
 
 clean:
 	rm -rf *.o heat
