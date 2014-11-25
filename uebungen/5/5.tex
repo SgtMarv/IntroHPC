@@ -70,16 +70,30 @@ keepaspectratio]{plot.eps}
 
 \subsection{Heat Relaxation – Pre-considerations for parallelization}
 
-In dem Falle wäre vermutlich eine 2D Zerlegung der Problems am sinnvolsten, zumindest für größere Grids.
-\begin{itemize}
-    \item 1D Spaltenweise 
+\begin{figure}[htbp]
+\includegraphics[width=0.7\linewidth,
+keepaspectratio]{decomp1.png}
+\centering
+\end{figure}
 
+Ich würde für das Problem eine 1D-Zeilenweise Zerlegung wählen. Somit wird immer zusammenhängender Speicher adressiert. Die Aufteilung geschieht wie folgt:
+\begin{itemize}
+    \item Jeder Prozess $P$ berechnet die $p$-te Zeile des neuen Grids $X^{t+1}$
+    \item Zu Anfang bekommt jeder Prozess die Daten aus Zeile $p+1$. Also alle \emph{unteren} Nachbarn der Elemente aus der zu berechnenden Zeile $p$.
+    \item Diese können für das jeweilige Element aufsummiert werden.
+    \item Im nächsten schritt werden die Daten von $X^{t}$ an den nächsten Prozess weitegeschickt und vom vorherigen empfangen. Die neuen Daten wieder in der entprechenden Spalte aufsummieren und weiterschicken etc.
+    \item Man bekommt (bei Aufteilung von $n$ Zeilen auf $n$ Prozesse) eine 3 Stufige art Pipeline. Die auch für $p<n$ Skalierbar ist. 
 \end{itemize}
+
+Nachdem der letzte Datensatz verarbeitet wurde, müssen die neuen $X^{t+1}$ Daten wieder an einem Prozess eingesamelt werden. Dies kann auch gleich zum Synchronisieren genutzt werden, wenn alle Daten von allen Prozessen vorliegen, kann die nächste Iteration gestartet werden. 
+
+Dadurch das nciht alle Daten aufeinmal versendet werden sondern (in dem Beispiel) jeweils nur ein drittel, kann man den communication overlap zum Berechnen Nutzen. Dass der mächste Schritt der Berechnung gestartet werden kann hängt nun davon ab, dass die Daten vom Vorgängerprozess vorliegen.\\ 
 
 \begin{figure}[htbp]
 \includegraphics[width=0.7\linewidth,
-keepaspectratio]{decomp.png}
+keepaspectratio]{decomp2.png}
 \centering
 \end{figure}
+
 
 \end{document}
