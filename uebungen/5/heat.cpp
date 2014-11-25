@@ -42,6 +42,65 @@ void init_grid(double* grid, int n){
     print_init(grid,n);
 }
 
+
+void init_smile(double* grid, int n){
+    
+    float r,r1,r2;
+    r = 0.38*n;
+    r1 = 0.3*r;
+    r2= 0.6*r1;
+
+    for (int i = 0; i<n; i++){
+        for (int j = 0; j<n; j++){
+            if (r >= sqrt(pow(i-(n/2.0),2) + pow(j-(n/2.0),2))){    // test if point of grid within crircle or not
+                grid[i*n+j] = 127.0;
+            }
+            else {
+                grid[i*n+j] = 0.0;
+            }
+        }
+    }
+    for (int i = 0; i<n; i++){
+        for (int j = 0; j<n; j++){
+            if (r1 >= sqrt(pow(i-(0.65*n),2) + pow(j-(2.6*n/4.0),2))){    // test if point of grid within crircle or not
+                grid[i*n+j] = 0.0;
+            }
+        }
+    }
+    for (int i = 0; i<n; i++){
+        for (int j = 0; j<n; j++){
+            if (r1 >= sqrt(pow(i-(0.65*n),2) + pow(j-(1.4*n/4.0),2))){    // test if point of grid within crircle or not
+                grid[i*n+j] = 0.0;
+            }
+        }
+    }
+    float middle = n*0.3;
+    float width = n*0.3;
+    for (int i = 0; i<n; i++){
+        for (int j = 0; j<n; j++){
+            if( i>middle-r2 && i<middle+r2 && j>0.5*n-0.5*width && j< 0.5*n+0.5*width){
+                grid[i*n+j] = 0.0;
+            }
+        }
+    }
+    r2=1.1*r2;
+    for (int i = 0; i<n; i++){
+        for (int j = 0; j<n; j++){
+            if (r2 >= sqrt(pow(i-middle-0.01*n,2) + pow(j-(0.5*n-width*0.5),2))){    // test if point of grid within crircle or not
+                grid[i*n+j] = 0.0;
+            }
+        }
+    }
+    for (int i = 0; i<n; i++){
+        for (int j = 0; j<n; j++){
+            if (r2 >= sqrt(pow(i-middle-0.01*n,2) + pow(j-(0.5*n+width*0.5),2))){    // test if point of grid within crircle or not
+                grid[i*n+j] = 0.0;
+            }
+        }
+    }
+    print_init(grid,n);
+}
+
 double iteration(double* grid, int n){
     timeval a,b;
     gettimeofday(&a,NULL);
@@ -103,7 +162,7 @@ int main (int argc, char** argv){
 
 
     double* grid = new double [n*n];
-    init_grid(grid,n);
+    init_smile(grid,n);
 
     if(gif){
         print_state(grid,n,0);
@@ -113,6 +172,7 @@ int main (int argc, char** argv){
         if(gif){
             print_state(grid,n,i);
         }
+        cout << "ITeration: " << i << endl;
     }
 
     cout << "Total time: \t\t" << time_sum << endl;
