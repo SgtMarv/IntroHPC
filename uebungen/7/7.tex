@@ -22,12 +22,31 @@
 \hfill introhpc02
 
 \begin{center}
-\underline{\Huge{Intro HPC: Blatt 5}}\\
+\underline{\Huge{Intro HPC: Blatt 7}}\\
 \large{24.11.1014}\\
 \end{center}
 
-\subsection{Reading:}
+\subsection{Reading:Roofline - An Insightful
+Visual
+Performance
+Model for
+Multicore
+Architectures}
 
 
-\subsection{Reading:}
+
+\subsection{Reading: LogP: Towards a Realistic Model of Parallel Computation}
+The author is intruducing a model, that
+discribe the bottlenegs of a distributed memory
+multiprocessor in which processors communicate by point-to-
+point messages.
+Therefore it is based on a few of parameters like latency (L), overhead (o) , bandwidth (g) of communication and the number of processes (P) and the assumption of a finite capacity.
+Furthermore it is generall for different types ofcommunication protocolls or applications. 
+
+The author is finding, that for some applications some parameters can get negligible, which makes a simplification of the model possible. He testeted the model on different workloads like the FFT and the LU-Decomposition, to show how the use of the model can lead to effecient parallel applications in practice.
+In the paper he is also comparing this model to the widely used PRAM and the BSP model, which do not
+accurately reflect the performance characteristics of suchy systems, in his opinion.
+
+This model is promissing a couple of advantages to other often used models like including assynchrounus algorithms. It is 
+ very generall, so it might give a good overview of a system but not very detailed.
 \end{document}
