@@ -59,9 +59,16 @@ Using micro benchmarks he is testing 4 different cournels to apply this model.
 
 The Roofline model seams to be a very clear and easy to aply way for characterizing multicore architures for to find a first starting point for optimizations.
  \subsection{n-Body Problem – Partitioning/Communication Design}
-to avoid collectiv calls the sum over all other particles in the force calculation starts at i+1 so firstly we make sure no pair is countet twice and secondly the firstly needed particle position is diffrent for every process.
+In our n-Body code firstly the arrays of the accelation and positions and the mass are allocated dynamicly.
+Then we have the functions 'accelartions' and 'pos\_ update' that update first the accelartation and afterwards the positions of all the particles in every step.
 
-the masses are fix so broadcast it once.
+Since the masses are fix it will be the best to broadcast it once at the beginning of the calculation. For the communication to update the positions will have an ring communication. So everyboday sends the new postion to the neighbour till its broadcastet completely.
+
+To hide the latecies we use an unblocking send so the proceses can go on computing while sending the results of the particle before.
+ 
+To avoid collectiv calls the sum over all other particles in the force calculation starts at i+1 so firstly we make sure no pair is countet twice and secondly the firstly needed particle position is diffrent for every process. In this case you have to consider newtons laws by counting force and anti-force.
+
+
 
 
 \end{document}
