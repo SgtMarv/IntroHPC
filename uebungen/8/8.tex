@@ -1,0 +1,43 @@
+\documentclass[a4paper,11pt]{scrartcl}
+
+\usepackage[ngerman]{babel} 
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{graphicx}
+\usepackage{siunitx}
+
+\usepackage{epstopdf}
+
+\setcounter{section}{8}
+
+
+\begin{document}
+\hfill Alexander Schnapp
+
+\hfill Max Menges
+
+\hfill introhpc02
+
+\begin{center}
+\underline{\Huge{Intro HPC: Blatt 8}}\\
+\large{24.11.1014}\\
+\end{center}
+
+
+\subsection{On the Memory Access Patterns of Supercomputer Applications: Benchmark Selection and Its Implications}
+In this paper the author compares real supercomputer applications (from the Sandia National Laboraties) with integer and floating point benchmark suits. Thereby the main characteristics of a workload are: temporal locality (in order to use cashes), spatial locality (as the apllications`s stride of memory access) and also the Data intensiveness (definied by the amount of unique data per interval of instructions).
+
+In his results two points are crucial : The floating point SPEC suite it avarages much less data intensiveness than Sandia workloads, which can have more influence on the performance then the actuall efficiency of the storing. Secondly real integer workloads are much more harder on the memory system than the test suite. This means the performance is much more depending on the memory system.
+
+This paper is showing that their are important differences in the behaviour between real applications and test suits. This is crucial since the test suits should actually tell hard- and software designer what to focus at in order to achaive a higher perfomance in real applications not at test suits. Thus a significant difference could lead to wrong consequences.
+
+
+ \subsection{On the Effects of Memory Latency and Bandwidth on Supercomputer Application Performance}
+
+
+
+
+\end{document}
