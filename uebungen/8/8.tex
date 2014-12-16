@@ -1,0 +1,46 @@
+\documentclass[a4paper,11pt]{scrartcl}
+
+\usepackage[ngerman]{babel} 
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{graphicx}
+\usepackage{siunitx}
+
+\usepackage{epstopdf}
+
+\setcounter{section}{8}
+
+
+\begin{document}
+\hfill Alexander Schnapp
+
+\hfill Max Menges
+
+\hfill introhpc02
+
+\begin{center}
+\underline{\Huge{Intro HPC: Blatt 8}}\\
+\large{24.11.1014}\\
+\end{center}
+
+
+\subsection{On the Memory Access Patterns of Supercomputer Applications: Benchmark Selection and Its Implications}
+In this paper the author compares real supercomputer applications (from the Sandia National Laboraties) with integer and floating point benchmark suits. Thereby the main characteristics of a workload are: temporal locality (in order to use cashes), spatial locality (as the apllications`s stride of memory access) and also the Data intensiveness (definied by the amount of unique data per interval of instructions).
+
+In his results two points are crucial : The floating point SPEC suite it avarages much less data intensiveness than Sandia workloads, which can have more influence on the performance then the actuall efficiency of the storing. Secondly real integer workloads are much more harder on the memory system than the test suite. This means the performance is much more depending on the memory system.
+
+This paper is showing that their are important differences in the behaviour between real applications and test suits. This is crucial since the test suits should actually tell hard- and software designer what to focus at in order to achaive a higher perfomance in real applications not at test suits. Thus a significant difference could lead to wrong consequences.
+
+
+ \subsection{On the Effects of Memory Latency and Bandwidth on Supercomputer Application Performance}
+In this paper the author examines the memory performance of a suite of real applications (Sandia) on classicly on HP-systems used floating point workloads, but also on new emerging integer tasks. To detemine this he analysis the importance of the latency ( as the time between a processors request of a memory value and the first ariving bite) and
+bandwith (as the transfer speed of all the following data). 
+
+Thereby it is appearing that in floating point and even more in integer tasks the 
+latency is more important than the bandwith. Furthermore the integer workloads are much more memory sensitve. This has the consequences of: demonstrating some degree of "bandwidth headroom" in the construction of HPC-systems.
+
+The author mentioned the future HPC to get much more memory sensitve, as a consequence of the emerging integer workloads, which he uses as given and is not talking very much about why they now accour. Therefore a good example are the problems of the field of graph theory which are getting more and more important also in the area of HPC. Often these are particularly callenging to a memory system. 
+\end{document}
