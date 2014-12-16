@@ -97,10 +97,10 @@ int main (int argc, char** argv){
 
     int ndim = 1;   // MPI Cart vars
     int dim[ndim];
-    int periods[ndim];
-    int reorder = 0;
+    int period[ndim];
+    int reorder = 1;
     dim[0] = size;
-    periods[0] = 1;     //wrap around
+    period[0] = 0;     //dont wrap around
 
     MPI_Cart_create(MPI_COMM_WORLD, ndim, dim, period, reorder, &cart_comm);
 
@@ -124,11 +124,10 @@ int main (int argc, char** argv){
 
 // done with init
 
-
     double* grid0 = new double [n*n];
     double* grid1 = new double [n*n];
 
-    init_smile(grid,n);
+    init_grid(grid0,n);
 
     if(gif){
         print_state(grid,n,0);
@@ -138,13 +137,13 @@ int main (int argc, char** argv){
         if(gif){
             print_state(grid,n,i);
         }
-        cout << "ITeration: " << i << endl;
     }
 
     cout << "Total time: \t\t" << time_sum << endl;
     cout << "Time/Iteration: \t" << time_sum/iter << endl;
     cout << "GLOPS: \t\t" << (pow(10,-9) * n*n * 7)/(time_sum/iter) << endl;
 
+    MPI_Finalize();
     return 0;
 
 
