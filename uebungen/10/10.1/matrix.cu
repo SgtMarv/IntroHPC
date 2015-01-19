@@ -17,7 +17,7 @@ void checkErrors(char *label)
   err = cudaThreadSynchronize();
   if (err != cudaSuccess) {
     char *e = (char*) cudaGetErrorString(err);
-    fprintf(stdout, "CUDA Error: %s (at %s)\n", e, label);
+    cout << "Cuda Error: " << e << " (at " << label <<")" << endl;
   }
 
   err = cudaGetLastError();
