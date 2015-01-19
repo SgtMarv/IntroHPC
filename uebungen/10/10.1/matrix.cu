@@ -173,7 +173,7 @@ int main(int argc, char** argv){
     gettimeofday(&start,NULL);
     mat_mult_cpu(a,b,c,size);
     gettimeofday(&stop,NULL);
-    cout << "Time for CPU: " << time_diff(start,stop); << " s" << endl;
+    cout << "Time for CPU: " << time_diff(start,stop) << " s" << endl;
 
     print_mat(c,size);
 
