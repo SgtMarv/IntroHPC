@@ -1,7 +1,10 @@
 #include <iostream>
+#include <fstream>
+#include <cstring>
 #include <stdlib.h>
-#include <time.h>
+#include <stdio.h>
 #include <math.h>
+#include <sys/time.h>
 
 
 using namespace std;
