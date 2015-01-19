@@ -170,10 +170,20 @@ int main(int argc, char** argv){
     print_mat(a,size);
     print_mat(b,size);
 
+    //mat mult CPU
     gettimeofday(&start,NULL);
     mat_mult_cpu(a,b,c,size);
     gettimeofday(&stop,NULL);
     cout << "Time for CPU: " << time_diff(start,stop) << " s" << endl;
+
+    //mat mult GPU
+    gettimeofday(&start,NULL);
+    mat_mult_gpu<<<numBlocks, numThreadsPerBlock>>> (d_a,d_b,d_c,size);
+    gettimeofday(&stop,NULL);
+    synchronize();
+    cout << "Time for GPU: " << time_diff(start,stop) << " s" << endl;
+    checkErrors("compute on GPU");
+    
 
     print_mat(c,size);
 
