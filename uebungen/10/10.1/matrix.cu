@@ -147,6 +147,7 @@ int main(int argc, char** argv){
     float* a = new float [size*size];
     float* b = new float [size*size];
     float* c = new float [size*size];
+    float* c_comp = new float [size*size];
 
     float* d_a = new float [size*size];
     float* d_b = new float [size*size];
@@ -183,7 +184,9 @@ int main(int argc, char** argv){
     synchronize();
     cout << "Time for GPU: " << time_diff(start,stop) << " s" << endl;
     checkErrors("compute on GPU");
-    
+
+    cudaMemcpy(c_comp, d_c, size*size*sizeof(float), cudaMemcpyDeviceToHost); 
+    checkErrors("copy back");
 
     print_mat(c,size);
 
