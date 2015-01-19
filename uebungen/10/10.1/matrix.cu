@@ -90,7 +90,7 @@ void mat_mult_cpu(float* a, float* b, float* c, int size){
 __global__ void mat_mult_gpu(float* a, float* b, float* c, int size){
 
     int row = blockIdx.y * blockDim.y + threadIdx.y;
-    int col = blockIdx.x * blockDim.x + threadIdx.x
+    int col = blockIdx.x * blockDim.x + threadIdx.x;
 
     float pval = 0.0;
     for (int k = 0; k< size; k++){
