@@ -94,7 +94,7 @@ __global__ void mat_mult_gpu(float* a, float* b, float* c, int size){
 
     float pval = 0.0;
     for (int k = 0; k< size; k++){
-        pval += a[row * size + k] * b[k * size + col]
+        pval += a[row * size + k] * b[k * size + col];
     }
 
     c[row*size+col] = pval;
