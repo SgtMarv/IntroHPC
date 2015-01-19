@@ -1,18 +1,63 @@
 #include <iostream>
 #include <stdlib.h>
+#include <time.h>
+#include <math.h>
+
 
 using namespace std;
 
+static int selectedDevice = 0;
+long numThreadsPerBlock;
 
-void init_mat(float* mat, int size, bool zero){
-    if(zero){
+//copy from ex9 file
+void checkErrors(char *label)
+{
+  cudaError_t err;
+
+  err = cudaThreadSynchronize();
+  if (err != cudaSuccess) {
+    char *e = (char*) cudaGetErrorString(err);
+    fprintf(stdout, "CUDA Error: %s (at %s)\n", e, label);
+  }
+
+  err = cudaGetLastError();
+  if (err != cudaSuccess) {
+    char *e = (char*) cudaGetErrorString(err);
+    fprintf(stdout, "CUDA Error: %s (at %s)\n", e, label);
+  }
+}
+
+void synchronize()
+{
+  cudaError_t err;
+     
+  err = cudaThreadSynchronize();
+  if (err != cudaSuccess) {
+    char *e = (char*) cudaGetErrorString(err);
+    fprintf(stderr, "CUDA Error: %s (at synchronize)\n", e);
+  }
+}
+////////////////////////////////////////
+
+
+void init_mat(float* mat, int size, int init){
+    if(init==0){
         for(int i = 0; i<(size*size); i++){
             mat[i] = 0.0;
         }
     } 
-    else {
-        for(int i = 0; i<(size*size); i++){
-            mat[i] = (float)rand()/(double)(RAND_MAX);
+    if(init == 1){
+        for(int i = 0; i<size; i++){
+            for(int j = 0; j<size; j++){
+                mat[i*size+j] = (i+1)+(j+1);
+            }
+        }
+    }
+    if(init == 2){
+        for(int i = 0; i<size; i++){
+            for(int j = 0; j<size; j++){
+                mat[i*size+j] = (i+1)*(j+1);
+            }
         }
     }
 }
@@ -41,6 +86,11 @@ void mat_mult_cpu(float* a, float* b, float* c, int size){
         }
     }
 }
+
+__global__ void mat_mult_gpu(float* a, float* b, float* c, int size){
+
+
+}
     
 
 int main(int argc, char** argv){
@@ -57,9 +107,9 @@ int main(int argc, char** argv){
     float* b = new float [size*size];
     float* c = new float [size*size];
 
-    init_mat(a,size,false);
-    init_mat(b,size,false);
-    init_mat(c,size,true);
+    init_mat(a,size,1);
+    init_mat(b,size,2);
+    init_mat(c,size,0);
 
     print_mat(a,size);
     print_mat(b,size);
