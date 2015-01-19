@@ -89,6 +89,15 @@ void mat_mult_cpu(float* a, float* b, float* c, int size){
 
 __global__ void mat_mult_gpu(float* a, float* b, float* c, int size){
 
+    int row = blockIdx.y * blockDim.y + threadIdx.y;
+    int col = blockIdx.x * blockDim.x + threadIdx.x
+
+    float pval = 0.0;
+    for (int k = 0; k< size; k++){
+        pval += a[row * size + k] * b[k * size + col]
+    }
+
+    c[row*size+col] = pval;
 
 }
     
@@ -97,6 +106,31 @@ int main(int argc, char** argv){
 
     int size;
     size = atoi(argv[1]);
+
+    numThreadsPerBlock = atol(argv[2]);
+    int numBlocks = (size+numThreadsPerBlock-1)/numThreadsPerBlock;
+    if (numThreadsPerBlock > 1024){
+        cout << "ERROR: NumThreadPerBlock must be < 1024" << endl;
+        return 0;
+    }
+    if(numBlocks >65536){
+        cout << "ERROR: numBlocks must be < 65536, is " << numBlocks << endl;
+        return 0;
+    }
+
+    int deviceCount;
+    cudaGetDeviceCount(&deviceCount);
+    if (deviceCount== 0){
+        cout << "ERROR: No device found" << endl;
+        return 0;
+    }
+    if(selectedDevice >= deviceCount){
+        cout << "ERROR: Choose dev ID between 0 and " << deviceCount-a << endl;
+        return 0;
+    }
+    cudaSetDevice(selectedDevice);
+    checkErrors("init");
+
 
     int seed = time(NULL);
     srand(seed);
