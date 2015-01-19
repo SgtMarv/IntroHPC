@@ -125,7 +125,7 @@ int main(int argc, char** argv){
         return 0;
     }
     if(selectedDevice >= deviceCount){
-        cout << "ERROR: Choose dev ID between 0 and " << deviceCount-a << endl;
+        cout << "ERROR: Choose dev ID between 0 and " << deviceCount-1 << endl;
         return 0;
     }
     cudaSetDevice(selectedDevice);
