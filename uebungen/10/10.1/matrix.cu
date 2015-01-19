@@ -141,9 +141,19 @@ int main(int argc, char** argv){
     float* b = new float [size*size];
     float* c = new float [size*size];
 
+    float* d_a = new float [size*size];
+    float* d_b = new float [size*size];
+    float* d_c = new float [size*size];
+
     init_mat(a,size,1);
     init_mat(b,size,2);
     init_mat(c,size,0);
+
+    cudaMalloc((void**) &d_a, size*size*sizeof(float));
+    cudaMalloc((void**) &d_b, size*size*sizeof(float));
+    cudaMalloc((void**) &d_c, size*size*sizeof(float));
+    checkErrors("mem alloc");
+
 
     print_mat(a,size);
     print_mat(b,size);
