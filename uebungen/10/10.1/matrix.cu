@@ -39,6 +39,10 @@ void synchronize()
 }
 ////////////////////////////////////////
 
+double time_diff(timeval a, timeval b){
+    return (b.tv_sec-a.tv_sec)+pow(10,-6)*(b.tv_usec-a.tv_usec);
+}
+
 
 void init_mat(float* mat, int size, int init){
     if(init==0){
@@ -154,11 +158,19 @@ int main(int argc, char** argv){
     cudaMalloc((void**) &d_c, size*size*sizeof(float));
     checkErrors("mem alloc");
 
+    cudaMemcpy(d_a, a, size*size*sizeof(float), cudaMemcpyHostToDevice);
+    cudaMemcpy(d_b, b, size*size*sizeof(float), cudaMemcpyHostToDevice);
+    cudaMemcpy(d_c, c, size*size*sizeof(float), cudaMemcpyHostToDevice);
+    checkErrors("copy date to dev");
+
 
     print_mat(a,size);
     print_mat(b,size);
 
+    gettimeofday(&start,NULL);
     mat_mult_cpu(a,b,c,size);
+    gettimeofday(&stop,NULL);
+    cout << "Time for CPU: " << time_diff(start,stop); << " s" << endl;
 
     print_mat(c,size);
 
