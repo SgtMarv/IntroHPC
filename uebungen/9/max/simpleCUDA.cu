@@ -6,13 +6,13 @@
 
 using namespace std;
 
-float time_diff(timeval a, timeval b){
+double time_diff(timeval a, timeval b){
     return (b.tv_sec-a.tv_sec) * pow(10,-6) * (b.tv_usec - a.tv_usec);
 }
 
 void init_array(float* ary, int n){
-    for(int i = 0; i<n i++){
-        ary[i] = (float)rand()/(float(RAND_MAX);
+    for(int i = 0; i<n; i++){
+        ary[i] = (float)rand()/(float(RAND_MAX));
     }
 }
 
@@ -45,8 +45,8 @@ int main (int argc, char **argv){
 	long factor = 1; //for command line parsing
 	char *pos = NULL;
 
-  if (argc != 3) {
-    printf ("Usage: %s <problem size{k,M,G}> <block size>\n", argv[0]);
+  if (argc != 4) {
+    //sprintf ("Usage: %s <problem size{k,M,G}> <block size>\n", argv[0]);
     exit (0);
   }
   pos = strrchr (argv[1], 'k');
@@ -66,29 +66,33 @@ int main (int argc, char **argv){
   }
   n = atol (argv[1]);
   n *= factor;
+
+	pinned_mem = atoi(argv[3]);
      
   long numThreadsPerBlock;
   int selectedDevice = 0;
   
   numThreadsPerBlock = atol (argv[2]);
-  int numBlocks = (N+numThreadsPerBlock-1) / numThreadsPerBlock;
+  int numBlocks = (n+numThreadsPerBlock-1) / numThreadsPerBlock;
      
   if (numThreadsPerBlock > 1024) {
-    printf ("ERROR: numThreadsPerBlock must be <= 1024!\n");
+    //printf ("ERROR: numThreadsPerBlock must be <= 1024!\n");
+	cout << "Err: numThready <= 1024 " << endl;
     return 0;
   }
   if (numBlocks >= 65536) {
-    printf ("ERROR: numBlocks must be < 65536 (is %ld)!\n", numBlocks);
+    //printf ("ERROR: numBlocks must be < 65536 (is %ld)!\n", numBlocks);
+	cout << "Err: numBlocks < 65536" << endl;
     return 0;
   }
 
     //for timing
     timeval start, stop;
-    float t_init; 
-    float t_copy;
-    float t_cpu;
-    float t_gpu;
-    float t_back;
+    double t_init; 
+    double t_copy;
+    double t_cpu;
+    double t_gpu;
+    double t_back;
 
 
   /////////////////////////////////////
@@ -99,11 +103,11 @@ int main (int argc, char **argv){
   int deviceCount;
   cudaGetDeviceCount(&deviceCount);
   if (deviceCount == 0) {
-    fprintf(stderr, "Sorry, no CUDA device fount");
+    //fprintf(stderr, "Sorry, no CUDA device fount");
     return 1;
   }
   if (selectedDevice >= deviceCount) {
-    fprintf(stderr, "Choose device ID between 0 and %d\n", deviceCount-1);
+    //fprintf(stderr, "Choose device ID between 0 and %d\n", deviceCount-1);
     return 1;
   }
   cudaSetDevice(selectedDevice);
@@ -118,17 +122,17 @@ int main (int argc, char **argv){
 
     //where to alloc host vars
     if (pinned_mem){
-        cudaMallocHost((void**) &x, N*sizeof(float));
-        cudaMallocHost((void**) &y, N*sizeof(float));
+        cudaMallocHost((void**) &x, n*sizeof(float));
+        cudaMallocHost((void**) &y, n*sizeof(float));
     }
     else {
-        x = (float*) malloc(N*sizeof(float));
-        y = (float*) malloc(N*sizeof(float));
+        x = (float*) malloc(n*sizeof(float));
+        y = (float*) malloc(n*sizeof(float));
     }
 
     //allocate device vars on GPU 
-    cudaMalloc((void**)&d_x, N*sizeof(float));
-    cudaMalloc((void**)&d_y, N*sizeof(float));
+    cudaMalloc((void**)&d_x, n*sizeof(float));
+    cudaMalloc((void**)&d_y, n*sizeof(float));
 
    
     //init arrays on CPU
@@ -136,25 +140,25 @@ int main (int argc, char **argv){
     init_array(x, n);
     init_array(y, n);
     gettimeofday(&stop, NULL);
-    t_init = diff_time(start,stop);
+    t_init = time_diff(start,stop);
 
     
     // copy to GPU
     gettimeofday(&start, NULL);
-    cudaMemcpy(d_x, x, N*sizeof(float), cudaMemcpyHostToDevice);
-    cudaMemcpy(d_y, y, N*sizeof(float), cudaMemcpyHostToDevice);
+    cudaMemcpy(d_x, x, n*sizeof(float), cudaMemcpyHostToDevice);
+    cudaMemcpy(d_y, y, n*sizeof(float), cudaMemcpyHostToDevice);
     gettimeofday(&stop, NULL);
-    t_copy = diff_time(start, stop);
+    t_copy = time_diff(start, stop);
 
     // do operation on CPU 
     gettimeofday(&start, NULL);
-    saxpy_cpu(x, y, a, N);
+    saxpy_cpu(x, y, a, n);
     gettimeofday(&stop, NULL);
     t_cpu = time_diff(start, stop);
 
     // do operation on GPU
     gettimeofday(&start, NULL);
-    saxpy_cpu<<<numBlocks, numThreadsPerBlock>>>(d_x, d_y, a, N);
+    saxpy_gpu<<<numBlocks, numThreadsPerBlock>>>(d_x, d_y, a, n);
     cudaThreadSynchronize();
     gettimeofday(&stop, NULL);
     t_gpu = time_diff(start, stop);
@@ -163,19 +167,19 @@ int main (int argc, char **argv){
     //write back and compare
     float* tmp_y; 
     if (pinned_mem){
-        cudaMallocHost((void**) &tmp_y, N*sizeof(float));
+        cudaMallocHost((void**) &tmp_y, n*sizeof(float));
     }
     else {
-        tmp_y = (float*) malloc(N*sizeof(float));
+        tmp_y = (float*) malloc(n*sizeof(float));
     }
 
     gettimeofday(&start, NULL);
-    cudaMemcpy(tmp_y, d_y, N*sizeof(float), cudaMemcpyDeviceToHost);
+    cudaMemcpy(tmp_y, d_y, n*sizeof(float), cudaMemcpyDeviceToHost);
     gettimeofday(&stop, NULL);
     t_back = time_diff(start, stop);
 
     int err_count = 0;
-    for(int i = 0; i<N; i++){
+    for(int i = 0; i<n; i++){
         if(abs(tmp_y[i]-y[i]) > 1e-6){
             cout << "Error on comparison on index: " << i << endl;
             err_count++;
