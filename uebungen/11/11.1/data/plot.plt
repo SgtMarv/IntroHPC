@@ -1,7 +1,7 @@
 set term eps enhanced color
 set output "latency.eps"
 
-set title "MPI Latency Ethernet vs. Extoll"
+set title "MPI Latency Ethernet vs. Extoll1"
 
 set logscale x 2
 
@@ -10,7 +10,7 @@ set ytics nomirror
 set y2tics
 
 set xrange [0.5:1500]
-set yrange [0:0.18]
+set yrange [0:18]
 set y2range [0:18]
 
 set xlabel "Message size in [kB]"
