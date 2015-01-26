@@ -29,7 +29,17 @@
 
 \subsection{Reading}
 \subsubsection{On Achieving High Message Rates}
-I
+In this paper the authors are pesenting a network architecture based on EXTOLL optimized for high message rates, which is the main influecning factor for sending small messenges, together with the start-up latency. Therefore the system uses a  
+Virtualized Engine for Low Overhead (VELO) for small messenges, which is using PIO to reduce the injection latency as much as possible. Also a  Remote Memory Access (RMA)
+unit is employed, which uses DMA to handle large messages.
+
+On software level they also differentiate between
+eager and rendevouz protocol
+In this way they achieve a messege rate of 9 million messeges per second. Which is beating Infiniband and of course the not compateble 10G Ethernet. In the current system fpgas are used but out of these result they want to predict the performence, changing to ASICs, which shoud allow for both higher clock frequencies and wider data paths.
+
+I think it is a pretty good result at very small messege sizes, but since Infiniband is much fast at already 64 B messeges and larger the question is wether the measuerd advantage is also transferable to real workloads. 
+
+
 \subsubsection{Global GPU Address Spaces for Efficient
 Communication in Heterogeneous Clusters}
 In this paper, the authors propose and implement a model for direct GPU to GPU message passing, by-passing the CPU, called GGAS -- Global GPU Adress Space. The approach uses a shared memory engine to map some GPU registers to a cluster wide global memory. For testing, acustom network device was implemented on an FPGA. 
